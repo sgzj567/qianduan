@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*    function foo() {
+                var a = 1;
+             console.log(a); //1
+             console.log(b); //undefined
+            var b = 2;
+           }
+               foo(); */
+        // js是这样解析的  在作用域内变量、函数会被提升声明   先声明   等代码执行阶段再赋值
+        /*  1. 变量声明、 函数声明都会被提升到作用域顶处；
+         2. 当出现相同名称时， 优先级为： 变量赋值 > 函数声明 > 变量声明 */
+        // 代码段1
+        function foo() {
+            var a;
+
+            function a() {}
+            console.log(a);
+        }
+        foo(); //没有赋值操作，值为a(){}
+
+        // 代码段2
+        function foo() {
+            var a = 1;
+
+            function a() {}
+            console.log(a);
+        }
+        foo(); //有赋值操作，值为1
+        // 所以变量一旦有赋值，优先级在最前面
+        var foo = function(x, y) { //注意foo被赋值
+            return x - y;
+        }
+
+        function foo(x, y) {
+            return x + y;
+        }
+        var num = foo(1, 2);
+
+        function foo() {
+            var a;
+            var b;
+            a = 1;
+            console.log(a); // 1
+            console.log(b); // undefined
+            b = 2;
+        }
+        foo();
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a); //此时的a是作用于函数里面的
+
+        function f1() {
+            var a = b = c = 9;
+            /*             相当于
+                        var a = 9;
+                        b = 9;
+                        c = 9; */
+            // b和c直接赋值 没有var声明 当全局变量看
+            // 集体声明
+            // var a = 9,b = 9;c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+    </script>
+</body>
+
+</html>

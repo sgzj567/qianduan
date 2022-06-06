@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 添加数组元素的方法
+        // 1.push() 在我们数组的末尾添加  添加一个或者多个数组元素  push 推
+        let arr = [1, 2, 3];
+        arr.push(4, 'pink');
+        console.log(arr);
+        // 1.push是可以给数组追加新元素的
+        // 2.push可以直接写数组元素就可以了
+        // 3.push完毕后  返回的结果是新数组的长度
+        // 4.原数组也会发生变化
+        // 5.unshift 在我们的数组开头  添加一个或者多个数组元素
+        arr.unshift('red', 'black');
+        console.log(arr);
+        // 1.unshift是可以给数组追加新元素的
+        // 2.unshift可以直接写数组元素就可以了
+        // 3.unshift完毕后  返回的结果是新数组的长度
+        // 4.原数组也会发生变化
+        // 3.pop()他可以删除数组最后一个元素
+        console.log(arr.pop());
+        console.log(arr);
+        // 4.shift删除数组第一个元素
+        console.log(arr.shift());
+        console.log(arr);
+    </script>
+</body>
+
+</html>

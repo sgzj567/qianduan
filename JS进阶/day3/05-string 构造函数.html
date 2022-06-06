@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let str = 'abcd';
+        // let str1 = new String('abcd');
+        // 字符串其实和数组相似
+        let str = 'abcdefgabcd';
+        // 属性：length
+        // console.log(str.length);
+        // console.log(str[1]);
+        for (let i = 0; i < str.length; i++) {
+            console.log(str[i]);
+        }
+        // trim:用于去除两边空格
+        let str1 = '    abcd  acvh  '
+        console.log(str1);
+        console.log(str1.trim());
+        // split:分割字符串 最后通过数组返回
+        let re = str1.split('c')
+        let re1 = str1.split('')
+        console.log(re);
+        console.log(re1);
+        let str2 = 'abcdefGHBcd'
+            // toLowerCase();把字母转成小写字母
+        let re2 = str2.toLowerCase();
+        console.log(re2);
+        // toUpperCase();把字母转成大写字母
+        let re3 = str2.toUpperCase();
+        console.log(re3);
+        // indexOf 查找某个元素首次出现的索引值  找不到就是-1
+        let re4 = str1.indexOf('b');
+        console.log(re4);
+        // 字符串截取：
+        let str3 = 'abcdefgbcd';
+        // slice:截取字符串
+        // 字符串.slice（start,end);从start开始 索引位置截取字符串截取到end位置索引位置
+        // 注意： end位置上的索引位置不截取 不会把小值放到前面
+        let re5 = str3.slice(2, 6);
+        console.log(re5);
+        // substring:截取字符串substring(start,end)从start开始 索引位置截取字符串截取到end位置索引位置
+        // 注意： end位置上索引位置不截取
+        let re6 = str3.substring(2, 6); //会把小值自动放到前面 (8,3)=>(3,8)
+        console.log(re6);
+        // slice与substring共有特征 如果只有一个参数 就是从那个位置一直截取到完
+        // substr:截取字符串个数
+        // 字符串：substr(start,length),从start索引位置截取length个字符串
+        let re7 = str3.substr(2, 3); //如果没有第二个参数 就从第一个截完
+        console.log(re7); //cde
+    </script>
+</body>
+
+</html>

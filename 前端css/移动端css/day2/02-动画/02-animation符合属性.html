@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation符合属性</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 300px;
+            background-color: green;
+            /* animation: change 1s linear; */
+            /* steps()分布动画 */
+            /* 3表示重复3次第二个1s 表示延迟时间 */
+            /* infinite表示是无限重复次数 */
+            /* animation: change 1s steps(3) 1s 3; */
+            /* 速度曲线 linear ease */
+            /* 要添加执行状态 就不能写重复次数 和动画方向 */
+            /* animation: 动画名称 动画时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕时状态； */
+            /* alternate动画方向 */
+            animation: change 1s forwards;
+            /* 默认值动画停留在最初状态 */
+            /* animation: change 1s backwards; */
+        }
+        
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. 正则表达式  匹配字符串中字符组合模式
+        // 作用  表单验证  过滤敏感词
+        //  提取
+        // 定义正则表达式
+        // let 变量名=/表达式
+        let reg = /前端/
+            // 2.判断是否符合规则的表达式
+            // 语法 
+        let str = '我们大家都在学习前端'
+            // reg.test('我们大家都在学习前端') // /前端/.test('我们大家都在学习前端')boolean型
+        console.log(reg.test(str)); //true
+        // 3.检索 exec()
+        console.log(reg.exec(str)); //输出数组  并输出找到的元素索引号
+        let xo = /黑马/
+        console.log(xo.exec(str)); //没找到输出null
+    </script>
+</body>
+
+</html>

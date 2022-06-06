@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 如果箭头函数只有一个参数就可以省略掉小括号
+        let fn = a => {
+            console.log(a);
+        }
+        fn(88);
+        // 注意函数体  只有一行代码  就可以省略大括号
+        // 如果把大括号省略的话就会 自动返回结果  不需要写return 
+        let fn1 = a =>
+            a + a;
+
+        console.log(fn1(77));;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹性盒子换行</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* 任何容器都可以==使用flex布局 */
+        /* 1.当我们为父盒子设为flex布局后,子元素的float clear 和vertical-align属性将失效 */
+        /* 2.伸缩布局=弹性布局=伸缩盒布局=弹性盒子布局=flex布局 */
+        
+        .box {
+            /* 给父级加这个属性作用于子级 */
+            display: flex;
+            /* 都是作用于子级 */
+            /* 弹性盒子换行 */
+            /* 默认值是nowrap不换行 */
+            flex-wrap: wrap;
+            /* 调节行的对齐方式 */
+            /* 此时全部紧紧凑在一起左边挨着边框 上下居中显示 */
+            /* align-content: center; */
+            /* 行与行盒子之间有相等距离 所以上下边框之间距离是其余行盒子之间距离的两倍  */
+            /* align-content: space-around; */
+            /* 间距中间相等 上下盒子紧贴上下沿边 */
+            align-content: space-between;
+            height: 500px;
+            border: 1px solid #000;
+        }
+        
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+
+</html>

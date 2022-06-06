@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 200px;
+            /* 背景线性渐变必须加上浏览器私有前缀括号里的依次是方向 从什么到什么的渐变颜色 颜色可以对加几个 */
+            /* 默认的渐变方向是top 所以可以省略 */
+            /* 起始方向可以是方位名词或者度数，如果省略默认就是top */
+            background: -webkit-linear-gradient(left, red, blue);
+            /* 也可以是从左上角开始 */
+            background: -webkit-linear-gradient(left top, red, blue);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位元素居中效果</title>
+    <style>
+        .father {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        
+        .son {
+            position: absolute;
+            /* 一下两个是相对于父盒子的百分比 */
+            left: 50%;
+            top: 50%;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 以下是相对于left和top之后向左和向右移动的 */
+            /* margin-left: -100px;
+            margin-top: -50px; */
+            /* 与margin-left和margin-top效果一样 */
+            /* transform: 取得值是自身的百分比 */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

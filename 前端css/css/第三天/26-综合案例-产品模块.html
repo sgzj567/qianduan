@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 综合案例产产品模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body .box {
+            width: 298px;
+            height: 415px;
+            background-color: #fff;
+            /* 让块级盒子居中对齐 */
+            margin: 100px auto;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .box img {
+            width: 100%;
+            /*此时图片宽度不会超过盒子 会和盒子一样宽 */
+        }
+        
+        .review {
+            height: 70px;
+            font-size: 14px;
+            /* 因为这个段落没有width属性 所以padding不会撑开盒子的宽度 */
+            padding: 0 28px;
+            margin-top: 30px;
+        }
+        
+        .apprasize {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+        
+        .info {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+        
+        .info h4 {
+            display: inline-block;
+            font-weight: 400;
+        }
+        
+        .info span {
+            color: #ff6700;
+        }
+        
+        .info em {
+            font-style: normal;
+            color: #ebe4e0;
+            margin: 0 6px 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/ps1.jpg" alt="">
+        <p class="review">快递牛 蜗牛</p>
+        <div class="apprasize">来自于13987的评价</div>
+        <div class="info">
+            <h4><a href="#"> Redmi真无线...</a></h4>
+            <em>|</em>
+            <span>99.9</span>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

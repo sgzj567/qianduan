@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.新增数组元素 修改length长度
+        var arr = ['red', 'green', 'blue'];
+        console.log(arr.length);
+        arr.length = 5; // 修改数组长度
+        console.log(arr[3]);
+        console.log(arr[4]); // undefined;
+        console.log(arr.length);
+
+        // 2.新增数组元素 修改索引号 追加数组元素 
+        var arr1 = ['red', 'green', 'blue'];
+        arr1[3] = 'pink'
+        console.log(arr1[3]);
+        arr1[0] = 'yellow'; // 如果原有位置有元素 就会替换原来元素
+        console.log(arr1[0]);
+        arr1 = '有点意思';
+        console.log(arr1); // 不要直接给数组名字赋值 不然会全部替换
+    </script>
+</body>
+
+</html>

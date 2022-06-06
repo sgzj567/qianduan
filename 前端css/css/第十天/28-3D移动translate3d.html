@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 透视写在被观察元素的父盒子上面 */
+        /* 透视就是视距 视距就是人的眼睛距离屏幕的距离 */
+        /* z轴就是物体距离屏幕的距离 z轴(正值)越大 我们看到的物体就越大 */
+        
+        body {
+            perspective: 800px;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transform: translateX(100px);
+            transform: translateY(100px); */
+            /* 目前看不到z轴效果 需要加透视 */
+            /* translatez一般向外移动 后面单位跟px */
+            /* transform: translateX(100px) translateY(100px) translateZ(100px); */
+            /* 3D移动一般有简写方式 */
+            transform: translate3d(200px, 100px, 100px);
+            /* xyz是不能省略的,如果没有就写0 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

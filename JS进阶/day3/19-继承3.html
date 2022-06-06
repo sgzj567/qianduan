@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function People() {
+            this.head = 1;
+            this.eyes = 2;
+            this.legs = 2;
+            this.height = '身高';
+            this.weight = '体重';
+            this.say = function() {
+                console.log('say');
+
+            }
+            this.walk = function() {
+                console.log('走路');
+            }
+            this.eat = function() {
+                console.log('吃饭');
+            }
+        }
+
+        function Star() {
+            this.daban = '打扮';
+            this.qian = 'money';
+        }
+        // 运动员
+        function Players() {
+            this.suzhi = '好';
+            this.lihao = '天赋';
+        }
+        // 继承：
+        // 1.公共构造函数的实例对象赋值给原型对象
+        Star.prototype = new People();
+        // 2.指回构造函数本身
+        Star.prototype.constructor = Star;
+        let ak = new Star();
+        console.log(ak);
+        Players.prototype = new People();
+        Players.prototype.constructor = Players;
+        let pl1 = new Players();
+        console.log(pl1);
+    </script>
+</body>
+
+</html>

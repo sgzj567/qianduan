@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>空间位移</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all .5s;
+        }
+        
+        .box:hover {
+            /* transform: translate3d(50px, 50px, 200px); */
+            /* transform: translateX(50px); */
+            /* transform: translateY(100px); */
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

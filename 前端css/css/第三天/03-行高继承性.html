@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>行高继承性</title>
+    <style>
+        body {
+            color: pink;
+            /* font: 12px/24px 'Microsoft  Yahei'; */
+            font: 12px/1.5 "micrsoft yahei";
+        }
+        
+        div {
+            /* 子元素继承了父元素body的行高1.5 */
+            /* 这个1.5就是当前元素文字大小 font-size的1.5倍 */
+            font-size: 14px;
+        }
+        
+        p {
+            /* 此时p继承了body的行高及为1.5*16px(当前文字及子元素大小×1.5) */
+            font-size: 16px;
+        }
+        /* li没有指定文字大小 则会继承父亲的文字大小 body 12px 所有li的文字大小为12px 
+        当前li的行高为12*1.5*/
+        /* body行高1.5这样写法最大优势就是里面子元素可以根据自己文字大小自动调整行高*/
+    </style>
+</head>
+
+<body>
+    <div>粉红的回忆</div>
+    <p>粉红的回忆</p>
+    <ul>
+        <li>我没有指定文字大小 </li>
+    </ul>
+</body>
+
+</html>

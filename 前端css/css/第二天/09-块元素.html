@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>显示模式之块级元素</title>
+    <style>
+        div {
+            /* width: 200px; 如果没有指示宽度 他就和它的父亲一样宽及body*/
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 常见的块元素 <h1></h1>~<h6></h6> <P></P> <div></div> <ol></ol> <ul></ul>，其中<div></div>是最典型的块元素。 -->
+    <!-- 块级元素的特点： -->
+    <!--1.比较霸道，自己独占一行 
+        2.高度，宽度，外边距以及内边距都可以控制
+        3.宽度默认是容器（父级宽度）的100%
+        4.是一个容器及盒子，里面可以放行内或者块级元素  -->
+    <!-- 注意：
+        1.文字类的元素内不能使用块级元素
+        2.<P>标签主要用于存放文字，因此<P>里面不能存放块级元素，特别是不能存放div
+        3.同理，<h1>~<h6>等都是文字类块级标签，；里面也不能放其他块级元素
+    
+    -->
+    <div>比较霸道自己独占一行</div> 瑟瑟发抖
+</body>
+
+</html>

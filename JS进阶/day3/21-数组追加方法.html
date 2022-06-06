@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4];
+        let re = arr.reverse();
+        console.log(re);
+        console.log(Array.prototype);
+        // 写一个方法 让所有数组都能使用 调用这个方法就能得到这个数组的和
+        // this是方法里面的调用者
+        Array.prototype.sum = function() {
+            // 定义变量
+            let he = 0;
+            // 遍历
+            for (let i = 0; i < this.length; i++) {
+                he += this[i];
+            }
+            //返回
+            return he;
+        }
+        console.log(arr.sum());
+        // 求和
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = '我哎我的祖国,其实不喜欢';
+        // substring ,substr
+        // indexOf
+        let startIndex = str.indexOf('祖');
+        let endIndex = str.indexOf('国');
+        let re = str.substring(startIndex, endIndex + 1);
+        console.log(re);
+        let str1 = 'F:\\桌面\\JS进阶\\day3\\06-字符串练习题.html';
+        let start = str1.lastIndexOf('\\')
+        let end = str1.indexOf('.');
+        // 截取文件名
+        let re1 = str1.substring(start + 1, end);
+        console.log(re1);
+        let last1 = str1.lastIndexOf('\\')
+        let re2 = str1.substr(last1 + 1)
+        let re3 = re2.split('.')
+        console.log(re3);
+    </script>
+</body>
+
+</html>

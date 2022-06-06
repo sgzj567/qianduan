@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 作用域链：由作用域链串起来的链状结构
+        // 本质是  在函数被执行过程时 会优先查找当前函数作用域的变量  如果当前函数作用域查找不到  则会依次查找父级作用域 直到全局作用域
+        // 由内部向外部
+        let n = 2;
+
+        function fn() {
+            // 是否有声明这个变量
+            // 如果当前作用域没有这个变量  就回去上级作用域查找
+            n = 3;
+            console.log(n);
+        }
+        fn();
+    </script>
+</body>
+
+</html>

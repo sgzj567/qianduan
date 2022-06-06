@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 一一对应
+        // let [a, b, c, d, e, f] = ['张飞', '赵云', '关羽', '典韦', '张良', '刘备']
+        // console.log(a, b, c, d, e, f);
+        // 变量多值少
+        // let [a, b, c, d, e, f, g, h, i] = ['张飞', '赵云', '关羽', '典韦', '张良', '刘备']
+        // console.log(a, b, c, d, e, f, g, h, i);//没值的话就以undefined为准
+        // 变量少值多
+        // let [a, b, c] = ['张飞', '赵云', '关羽', '典韦', '张良', '刘备']
+        // console.log(a, b, c);
+        // 按需取值
+        // let [a, b, c, , e] = ['张飞', '赵云', '关羽', '典韦', '张良', '刘备']
+        // console.log(a, b, e);
+        // 剩余值取法 最后的数组只能放到末尾
+        // let [, a, b, ...c] = ['张飞', '赵云', '关羽', '典韦', '张良', '刘备']
+        // console.log(a, b, c);
+        // 复杂情况
+        let [, , a, b, [, c, d]] = ['张飞', '赵云', '关羽', '张辽', ['林冲', '鲁智深', '武松']]
+        console.log(a, b, c, d);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['a', 'b', 'a', 'c', 'd', 'a', 'd', 'b', 'c', 'd', 'e']
+        let newArr = [];
+        // 遍历arr的每一个数组  在newArr中查找  如果找不到就把这个值添加进去
+        // indexOf:查找某个元素在数组首次出现的索引位置  找不到就返回-1
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (newArr.indexOf(arr[i]) == -1) newArr.push(arr[i]);
+        // }
+        // console.log(newArr);
+        let arr1 = [
+                [23, 66, 16],
+                [23, 66, 98],
+                [19, 22, 34, 56, 43, 21],
+            ]
+            // 求平均值
+            // 总和/个数
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            // arr[i]又是一个数组
+            for (let j = 0; j < arr1[i].length; j++) {
+                sum += arr1[i][j];
+                count++
+            }
+
+        }
+        let avg = sum / count;
+        console.log(avg);
+        // 求多维数组里的最大值
+        let max = arr1[0][0];
+        for (let i = 0; i < arr1.length; i++) {
+            // arr[i]又是一个数组
+            for (let j = 0; j < arr1[i].length; j++) {
+                if (max <= arr1[i][j]) {
+                    max = arr1[i][j]
+                }
+            }
+        }
+        console.log(max);
+    </script>
+</body>
+
+</html>

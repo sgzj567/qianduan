@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+                uname: '张三丰',
+                age: '110',
+                sex: '男',
+                score: '119',
+                taiji: function() {
+                    console.log('打太极');
+                }
+
+            }
+            // 两种输出方法
+        console.log(obj.uname); //用于固定属性写法
+        console.log(obj['sex']); //用于动态属性写法
+        // 不加括号当做属性值访问了
+        console.log(obj.taiji);
+        // 加括号 调用方法
+        console.log(obj.taiji());
+        // 遍历每种属性
+        for (let key in obj) {
+            console.log(obj[key]);
+        }
+        let arr = [2, 3, 4, 5, 6]
+        for (let k in arr) {
+            console.log(arr[k]);
+        }
+    </script>
+</body>
+
+</html>

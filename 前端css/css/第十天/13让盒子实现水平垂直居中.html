@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            /* 1.translate里面可以使用%号的 */
+            /* 2.如果里面参数是%号 移动的距离是盒子自身的宽度或者高度来对比的 */
+            /* 这里的50%是50px;因为盒子宽度是100px; */
+            /* transform: translateX(50%) */
+        }
+        
+        P {
+            position: absolute;
+            /* 距离父盒子上部和左边50% */
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 以下方式是盒子垂直居中 */
+            /* margin-top: -100px;
+            margin-left: -100px; */
+            transform: translate(-50%, -50%);
+        }
+        /*transform对于行内元素是无效的  */
+        
+        span {
+            transform: translate(100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <P></P>
+    </div>
+    <span>123</span>
+</body>
+
+</html>

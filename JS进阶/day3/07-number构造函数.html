@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let num=67;简单数据类型
+        let num = new Number(67);
+        console.log(num instanceof Number);
+        console.log(num);
+        // 方法：toFixed(number):用于保留几位有效数字
+        let price = 66.23978743;
+        // 谁保留前面写谁
+        price = price.toFixed(4);
+        console.log(price);
+        // parseFloat,parseInt 都放在了Number下面了
+        console.log(Number.parseInt(price)); //取整
+        console.log(Number.parseFloat(price));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            head: 1,
+            eyes: 2,
+            say: function() {
+                console.log('chi')
+            },
+            eat: function() {
+                console.log('he')
+            },
+        }
+
+        function Chinese() {
+            this.language = '汉语';
+            this.skin = 'yellow';
+        }
+
+        function Japanese() {
+            this.language = '日语';
+            this.skin = 'yellow';
+        }
+        // 原型
+        Chinese.prototype = obj; //对象赋值的是地址 复杂类型赋值的是地址
+        Chinese.prototype.constructor = Chinese; //因为给prototype赋值之后会把constructor覆盖了
+        // 实例化
+        let c1 = new Chinese();
+        console.log(c1);
+        c1.eat();
+        // 1.赋值对象
+        Japanese.prototype = obj;
+        // 2.指回构造函数
+        Japanese.prototype.constructor = Japanese; //因为给prototype赋值之后会把constructor覆盖了
+        let j1 = new Japanese();
+
+        console.log(j1);
+        j1.eat();
+    </script>
+</body>
+
+</html>

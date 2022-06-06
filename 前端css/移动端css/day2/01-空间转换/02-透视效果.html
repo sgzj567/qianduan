@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>透视效果</title>
+    <style>
+        /* 想要box盒子产生透视效果 必须给父级加perspective */
+        /* 近大远小 */
+        
+        body {
+            /* 视距 人的眼睛到电脑屏幕的距离 */
+            perspective: 1000px;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all .5s;
+        }
+        /* box后没有空格 */
+        
+        .box:hover {
+            /* 想要z轴有效果 必须给父级加perspective */
+            transform: translateZ(200px);
+            transform: translateZ(-200px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

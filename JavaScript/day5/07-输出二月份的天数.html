@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用户输入年份 输出当前二月份的天数
+        function backDay(year) {
+            var year = prompt('输入年份：')
+
+            if (isRunyear(year)) { //如果返回true 是29天 如果是FALSE 28天
+                alert('29天');
+            } else {
+                alert('28天');
+
+            }
+
+        }
+
+        function isRunyear(year) {
+            flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 4 == 0) {
+                flag = true;
+            }
+            return flag;
+        }
+        backDay();
+    </script>
+</body>
+
+</html>

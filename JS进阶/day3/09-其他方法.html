@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 公共方法
+        // toString:转换为字符串
+        let num = 123;
+        console.log(num.toString());
+        let flag = true; //boolean型
+        console.log(typeof flag);
+        console.log(flag.toString());
+        console.log(typeof flag.toString());
+        // undefined 和null不可以使用
+        // valueOf用于获取原始值
+        let num1 = new Number(789);
+        console.log(num.valueOf());
+        let flag1 = new Boolean(true);
+        console.log(flag.valueOf());
+        let d = new Date();
+        console.log(d);
+        console.log(d.valueOf()); //获得时间戳
+    </script>
+</body>
+
+</html>

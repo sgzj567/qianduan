@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn() {
+            console.log(arguments); //；里面存储了传递过来的实参 只有函数才有传递过来的实参 arguments=【1,2，3】
+            console.log(arguments.length);
+            console.log(arguments[2]);
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+
+            }
+
+
+        }
+        fn(1, 2, 3, 4, 5);
+        fn(1, 2, 3); // 伪数组 并不是真正意义上的数组
+        // 1.具有数组length属性
+        // 2.按照索引方式进行存储
+        // 3.他没有真正意义的数组一些方法 pop() push()等等
+    </script>
+</body>
+
+</html>

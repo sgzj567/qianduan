@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位的特殊性</title>
+    <style>
+        /* 1.行内元素添加绝对或者固定定位，可以直接设置高度和宽度 */
+        
+        span {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background-color: pink;
+        }
+        /* 2.块级元素添加绝对定位或者固定定位，如果不给宽度或高度，默认大小是内容的大小  */
+        
+        div {
+            background-color: skyblue;
+        }
+        /* 3.脱标的盒子不会触发外边塌陷
+        浮动元素 绝对定位（固定定位）元素都不会触发外边距合并的问题 */
+    </style>
+</head>
+
+<body>
+    <span> 123</span>
+    <div>abcd</div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位</title>
+    <style>
+        /* 绝对定位以父级元素为定位 */
+        /* 绝对到位如果祖先元素没有定位（此时定位不管是相对定位还是绝对到位都可以），就会以浏览器为位置定位 */
+        /* 以离得最近元素带有定位的元素做定位 */
+        
+        .yeye {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: red;
+            padding: 50px;
+        }
+        
+        .father {
+            /* position: relative; */
+            top: 10px;
+            left: 19px;
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        
+        .son {
+            /* 绝对定位不占用原先位置 */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

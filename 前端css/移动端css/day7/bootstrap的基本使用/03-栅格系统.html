@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <style>
+        .container div {
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- bootstrap里的水平排列是用float -->
+    <!-- 需求：大屏：一行排列四个内容；中屏：一行排列两个内容 -->
+    <!-- container是bootstrap中专门提供的类名，所有应用该类名的盒子，默认已被指定宽度且居中 -->
+    <!-- .container-fluid也是bootstrap中专门提供的类名，所有应用该类名的盒子 宽度均为100% -->
+    <!-- 分别使用.row .col 类名定义栅格布局行和列 -->
+    <!-- 注意container类自带间距15px row类自带间距-15px -->
+    <div class="container">
+        <div class="col-lg-3 col-md-6"> 1</div>
+        <div class="col-lg-3 col-md-6"> 1</div>
+        <div class="col-lg-3 col-md-6"> 1</div>
+        <div class="col-lg-3 col-md-6"> 1</div>
+    </div>
+</body>
+
+</html>

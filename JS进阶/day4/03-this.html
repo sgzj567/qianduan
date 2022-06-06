@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(this);全局的this指向window this 指向
+        // 1.普通函数 ：window调用者
+        function fn() {
+            console.log(this);
+        }
+        fn();
+        // 2.构造函数中this指向实例化对象
+        function Person(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            console.log(this);
+        }
+        let c1 = new Person('阿飞', 22);
+        // 3.方法  谁调用指向谁
+        let obj = {
+            uname: '张三丰',
+            age: '22',
+            fei: function() {
+                console.log(this.uname);
+            }
+        }
+        obj.fei();
+        // 4.事件处理函数：事件源
+        document.addEventListener('click', function() {
+                console.log(this);
+            })
+            // 5.定时器 指向this 调用者
+            // setInterval(function() {
+            //     console.log(this);
+            // }, 1000)
+            // 6.自动调用函数 :window 调用者
+        ;
+        (function() {
+            console.log(this);
+        })();
+
+        function fn() {
+            console.log(this);
+        }
+        document.addEventListener('click', fn)
+    </script>
+</body>
+
+</html>

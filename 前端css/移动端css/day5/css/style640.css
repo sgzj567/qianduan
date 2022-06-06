@@ -1,0 +1,14 @@
+div {
+    float: left;
+    width: 50%;
+}
+
+div:nth-child(1) {
+    height: 100px;
+    background-color: red;
+}
+
+div:nth-child(2) {
+    height: 100px;
+    background-color: green;
+}

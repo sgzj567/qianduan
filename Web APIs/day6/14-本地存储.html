@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 存储数据  简单数据类型直接存
+        /*    localStorage.setItem('uname', 'pink')
+           localStorage.setItem('age', 18)
+               // 获取数据
+           console.log(localStorage.getItem('uname')); */
+        // 删除数据
+        localStorage.removeItem('uname')
+            // localStorage.setItem('obj', obj)
+
+        let obj = {
+            uname: '刘德华',
+            age: 18,
+        }
+        console.log(JSON.stringify(obj));
+        // 复杂数据类型要转换成json数据类型
+        localStorage.setItem('obj', JSON.stringify(obj))
+            // 取数据
+            // 使用JSON.parse() 将json字符串转换为对象  因为获取的是字符串
+        console.log(JSON.parse(localStorage.getItem('obj')));
+        // localStorage.setItem('obj', obj)
+        // // 复杂数据类型  换成json形式
+        //     // JSON属性和值都是双引号进行包含
+        // let obj = {
+        //     "uname": "刘德华",
+        //     "age": "18",
+
+        // }
+    </script>
+</body>
+
+</html>

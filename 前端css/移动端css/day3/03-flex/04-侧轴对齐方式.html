@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            display: flex;
+            /* 侧轴垂直居中 */
+            /* align-items: center; */
+            /* 拉伸效果 默认值 如果子级盒子有高度 就不会拉伸 */
+            /* 如果子级没有高度 就默认继承父盒子高度 */
+            /* align-items: stretch; */
+            height: 300px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+        
+        .box div {
+            /* 如果子级没有宽度 就是盒子内容宽度 */
+            /* width: 100px; */
+            /* 注释掉height测试stretch 效果 */
+            /* height: 100px; */
+            /* 如果子盒子没有高度 就会拉伸高度就和弹性容器一样大 因为默认有stretch效果 */
+            background-color: pink;
+        }
+        /* align-self 单独测试某一个盒子侧轴对齐方式 */
+        
+        .box div:nth-child(2) {
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>123</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

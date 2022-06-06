@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 0.2s;
+        }
+        
+        div:hover {
+            /* 多个转换 中间加空格 */
+            /* 顺序会影响效果 */
+            /* transform: rotate(180deg) translate(150px, 50px); */
+            /* 我们同时拥有位移和其他属性,我们需要把位移放到最前面 */
+            transform: translate(150px, 50px) rotate(180deg) scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.利用函数求任意两个数的和
+        /*  function getNum(num1, num2) {
+             var sum = 0;
+             var num1 = prompt('请输入第一个数：');
+             var num2 = prompt('请输入第二个数：');
+             sum = parseFloat(num1) + parseFloat(num2); //prompt 取到的事字符串型
+             alert(sum);
+
+         }
+        getNum(); */
+        // 1.利用函数求任意两个数之间的和
+        function getSum(start, end) {
+            var start = prompt('请输入第一个数：');
+            var end = prompt('请输入第二个数：');
+            for (var i = parseFloat(start); i <= parseFloat(end); i++) {
+                var sum = 0;
+                sum = parseFloat(start) + parseFloat(end);
+            }
+            alert(sum);
+        }
+        getSum();
+        // 3.注意点
+        // 1.多个参数之间用逗号隔开
+        // 2.形参可以看做是不用声明的变量
+    </script>
+</body>
+
+</html>

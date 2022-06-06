@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片低侧空白缝隙解决方案</title>
+    <style>
+        /* bug:图片低侧会有一个空白缝隙，原因是行内块元素和文字基线对齐 */
+        /* 主要解决方案有两种：
+        1.给图片添加vertical-align:middle|top
+        middle|bottom等 提倡使用*/
+        /* 2.把图片转换为块级元素 dispaly:block;*/
+        
+        div {
+            border: 2px solid red;
+        }
+        
+        img {
+            width: 170px;
+            height: 200px;
+            display: block;
+            /* vertical-align: bottom; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/ldh.jpg" alt="">pink老师
+    </div>
+</body>
+
+</html>

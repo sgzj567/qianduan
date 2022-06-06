@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            background-color: pink;
+            vertical-align: middle;
+            padding-left: 15px;
+        }
+        
+        .errol {
+            color: red;
+            background: url(./error1.png) no-repeat left center;
+        }
+        
+        .right {
+            color: green;
+            background: url(./right.png) no-repeat left center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <span></span>
+    <script>
+        let input = document.querySelector('input')
+        let span = input.nextElementSibling
+        input.addEventListener('blur', function() {
+            if (/^[0-9a-zA-Z_]{6,16}$/.test(input.value)) {
+                // className会覆盖之前的类 classList回加到之前的 所以这里用className比较好
+                span.className = 'right'
+                span.innerHTML = '输入正确'
+            } else {
+                span.className = 'errol'
+                span.innerHTML = '输入错误'
+            }
+
+        })
+    </script>
+</body>
+
+</html>

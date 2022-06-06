@@ -1,0 +1,271 @@
+* {
+    /* 清除点击高亮模式 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* 在移动端浏览器默认外观在ios上加上这个属性才能给按钮和输入框自定义样式 */
+
+input {
+    -webkit-appearance: none;
+}
+
+
+/* 禁用长按页面时出现菜单 */
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+    background-color: #ccc;
+    height: 2000px;
+}
+
+a {
+    color: #666;
+    /* 没有下划线 */
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    /* 图片去除顶部空白地方 */
+    /* 以下两者都行 */
+    vertical-align: top;
+    /* vertical-align: middle; */
+}
+
+em {
+    font-style: normal;
+}
+
+div {
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+
+.app {
+    height: 45px;
+}
+
+.app ul li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(1) img {
+    width: 16px;
+    margin-top: 15px;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(2) img {
+    /* 高度等比例缩放 */
+    /* 图片默认和文字基线对齐 所以此时图片不会居中 */
+    width: 35px;
+    /* 让行内块居中对齐 此时图片居中对齐*/
+    vertical-align: middle;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #CD2525
+}
+
+.search-wrap {
+    /* Fixed定位使元素的位置与文档流无关，因此不占据空间。 Fixed定位的元素和其他元素重叠。 */
+    position: fixed;
+    /* 外边距合并 */
+    overflow: hidden;
+    /* 固定定位宽度要加100%宽 */
+    width: 100%;
+    height: 44px;
+    min-width: 320px;
+    max-width: 640px;
+}
+
+.search-btn {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 40px;
+    height: 44px;
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/s-btn.png);
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+}
+
+.search-login {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 40px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    margin: 0 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 7px;
+}
+
+.jd-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 20px;
+    height: 15px;
+    background-color: pink;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-icon::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 26px;
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    /* 此时在默认盒子内部 */
+    /* 所以给个定位 */
+}
+
+.sou {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+    /* -83此时精灵图缩放位置按缩放后写 */
+    background: url(../images/jd-sprites.png) no-repeat -83px 0;
+    /* 如果按下一行缩放 图片将不会显示 */
+    /*错误缩放 background-size: 18px 15px;  */
+    /* 此时精灵图缩放为原来的一半 因为是在移动端 一般来说是1：2的关系 */
+    background-size: 200px auto;
+}
+
+.slider img {
+    /* 宽度和父亲一样宽 即自适应 */
+    /* 高度也是等比例缩放 */
+    width: 100%;
+}
+
+
+/* 品牌日 */
+
+.brand {
+    /* 因为是给整个盒子切的圆角 所以加个这个 */
+    overflow: hidden;
+    /* 依次是左上 右上 左下 右下 */
+    border-radius: 10px 10px 0 0;
+}
+
+.brand div {
+    float: left;
+    /* 此时图片还不能是占1/3宽度 因为是给盒子宽度还需要给图片宽度 */
+    width: 33.33%;
+}
+
+.brand div img {
+    /* 此时图片宽度还要和div一样宽 */
+    width: 100%;
+}
+
+nav {
+    padding-top: 5px;
+}
+
+nav a {
+    float: left;
+    /* a是行内元素 给了浮动可以不用转换 */
+    width: 20%;
+    /* 文本内容 */
+    text-align: center;
+}
+
+nav a span {
+    display: block;
+}
+
+nav a img {
+    width: 41px;
+    margin: 10px 0;
+}
+
+
+/* news */
+
+.news img {
+    width: 100%;
+}
+
+.news a {
+    float: left;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(2),
+.news a:nth-child(3) {
+    width: 25%;
+}
+
+
+/* 或者按着下面写法 */
+
+
+/* 意思是从第二个开始  */
+
+.news a:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}

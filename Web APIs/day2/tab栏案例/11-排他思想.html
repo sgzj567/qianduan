@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="pink">1</button><button>2</button><button>3</button><button>4</button><button>5</button>
+    <script>
+        let btns = document.querySelectorAll('button')
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                /*    //干掉所有人
+                   for (let j = 0; j < btns.length; j++) {
+                       btns[j].classList.remove('pink')
+                   }
+                  */
+                //第二种方法
+                // 只需要找出唯一一个pink类删除
+                document.querySelector('.pink').classList.remove('pink')
+                    // 复活我自己
+                this.classList.add('pink')
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+        }
+        
+        .box img {
+            width: 300px;
+            height: 212px;
+        }
+        
+        .box .title {
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+            /* Z-index 仅能在定位元素上奏效（例如 position:absolute;）！ */
+            /* z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。 */
+            z-index: 2;
+            width: 260px;
+            color: #fff;
+            font-size: 20px;
+            /* 字体加粗 */
+            font-weight: 700;
+        }
+        
+        .box .mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 212px;
+            background-image: linear-gradient(transparent, rgba(0, 0, 0, .6));
+            /* 正常情况下是看不到的 */
+            opacity: 0;
+            /* dispaly:none; */
+            transition: all .5s;
+        }
+        
+        .box:hover .mask {
+            opacity: 1;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./images/product.jpg" alt="">
+        <div class="title">OceanStor Pacific 海量存储斩获2021 Interop金奖</div>
+        <div class="mask"></div>
+    </div>
+</body>
+
+</html>

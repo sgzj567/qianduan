@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // indexOf:查找某个元素在数组首次出现的索引位置  找不到就返回-1
+        let arr = [1, 2, 3, 45, 67, 78, 2, 55, 43, 2];
+        let re = arr.indexOf(3);
+        console.log(re);
+        // lastIndexOf:查找某个元素在数组中从末尾数出现的位置 找不到就返回-1
+        let la = arr.lastIndexOf(2)
+        console.log(la);
+        // sort：排序 
+        let arr1 = [3, 19, 34, 56, 2, 4, 1];
+        // 正序排列
+        let so = arr1.sort(function(a, b) {
+            return a - b;
+        })
+        console.log(so);
+        // 倒序排列
+        let so1 = arr1.sort(function(a, b) {
+            return b - a;
+        })
+        console.log(so1);
+    </script>
+</body>
+
+</html>

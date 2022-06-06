@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 背景平铺</title>
+    <style>
+        div {
+            width: 406px;
+            height: 727px;
+            /* 不要落下url */
+            background-image: url(1.jpg);
+            /* 1.背景图片不平铺 */
+            /* background-repeat: no-repeat; */
+            /* 2.默认的情况下都是平铺的 */
+            /* 3.沿着x轴平铺 */
+            /* background-repeat: repeat-x; */
+            /* 4.沿着y轴平铺 */
+            background-repeat: repeat-y;
+            background-color: pink;
+            /* 页面可以添加背景颜色也可以添加背景图片，只不过背景图片会压住背景颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

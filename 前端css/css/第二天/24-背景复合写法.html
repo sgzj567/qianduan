@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景属性复合写法</title>
+    <style>
+        body {
+            /* background-image: url(5.jpg); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center top; */
+            /* color: #fff; */
+            /* font-size: 20px; */
+            /* 背景图像默认是scroll 及随对象一起滚动  fixed 背景图像固定 */
+            /* background-attachment: fixed; */
+            /* 背景复合写法 为了简化背景属性的代码 可以将background合并书写
+            一般约定的顺序为：背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置 */
+            background: white url(5.jpg) no-repeat fixed center top;
+        }
+    </style>
+</head>
+
+<body>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+    <p>天王盖地虎，pink一米五</p>
+</body>
+
+</html>

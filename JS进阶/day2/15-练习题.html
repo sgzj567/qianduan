@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 10;
+        let m = 11;
+
+        function fn(a, b) {
+            a = 100;
+            b = 200;
+        }
+        fn(n, m);
+        console.log(n, m); //10 11; 
+        let o = {
+            uname: '张三丰',
+            age: 22,
+            sex: '男'
+        };
+
+        function fun(obj) {
+            obj.uname = '李寻欢';
+        }
+        fun(o);
+        console.log(o); //其实复杂类型也是按值传递
+        let arr = ['张良', '张飞', '赵宇']
+        arr[0] = '张辽';
+        console.log(arr);
+        arr[0] = '张辽';
+
+        function fn(arr) {
+            arr[0] = '张辽';
+        }
+        fn(arr);
+        console.log(arr);
+    </script>
+</body>
+
+</html>

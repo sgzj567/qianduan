@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* html默认高度是不和浏览器一样大的 如果想要一样大 就加下面的 */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(./../images/f1_1.jpg) no-repeat center 0;
+    /* 此时背景图出不来 body高度为0 */
+    /*contain背景图等比例缩放  如果缩放到宽或者高与背景图一样 图片就不缩放了 所以此时下面还有留白*/
+    /* background-size: contain; */
+    /* cover保证背景图全部覆盖 */
+    background-size: cover;
+}
+
+
+/* 1.img图片引入 */
+
+
+/*2. 定义动画 使用动画 */
+
+.cloud img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -200px;
+    top: 20px;
+    animation: cloud 1s infinite linear alternate;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 1s infinite linear 0.4s alternate;
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    /* alternate 反向 */
+    animation: cloud 1s infinite 0.6s linear alternate;
+}
+
+
+/* 云彩的动画 */
+
+@keyframes cloud {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+
+/* 二.引入热气球 */
+
+.balloon img {
+    position: absolute;
+    left: 50%;
+    bottom: 65px;
+}
+
+
+/* 设置热气球位置 */
+
+.balloon img:nth-child(1) {
+    margin-left: -400px;
+    animation: balloon 1s linear 0.2s infinite alternate;
+}
+
+.balloon img:nth-child(2) {
+    margin-left: -200px;
+    animation: balloon 2s linear 0.5s infinite alternate;
+}
+
+.balloon img:nth-child(3) {
+    margin-left: 0;
+    animation: balloon 2s linear 1s infinite alternate;
+}
+
+.balloon img:nth-child(4) {
+    margin-left: 200px;
+    animation: balloon 2s linear 1.7s infinite alternate;
+}
+
+
+/* 热气球的动画 */
+
+@keyframes balloon {
+    to {
+        transform: translateY(30px);
+    }
+}

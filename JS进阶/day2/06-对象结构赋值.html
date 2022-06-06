@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let obj = {
+        //     uname: '张三丰',
+        //     age: '22',
+        //     score: '56',
+        //     sex: '男',
+        //     index: '9',
+        // }
+        // console.log(obj.uname);
+        // // 把对象解开 结构赋值给变量
+        // let {
+        //     uname,
+        //     age,
+        //     sex,
+        //     abc,
+        // } = {
+        //     uname: '张三丰',
+        //     age: '22',
+        //     score: '56',
+        //     index: '9',
+        //     sex: '男',
+        // }
+        // console.log(uname);
+        // console.log(sex);
+        // console.log(abc);//没有定义的取值为undefined
+        // let uname = '巴扎黑'
+        // let {
+        //     uname: userName, //因为上面已经有了一个uname所以要改uname
+        //     age,
+        //     sex,
+        //     abc,
+        // } = {
+        //     uname: '张三丰',
+        //     age: '22',
+        //     score: '56',
+        //     index: '9',
+        //     sex: '男',
+        // }
+        // console.log(uname); //此时已经定义了一个uname但是必须要与属性名相同 所以在对象结构赋值的时候必须改名字 加：冒号
+        // console.log(userName, sex, abc);
+        // /复杂情况
+        let {
+            dog: {
+                uname
+            },
+            cat: {
+                uname: userName
+            }
+        } = {
+            dog: {
+                uname: '小狗子',
+                age: '13',
+            },
+            cat: {
+                uname: '小猫咪',
+            },
+            uname: '张三丰',
+            age: '22',
+            score: '56',
+            index: '9',
+            sex: '男',
+        }
+        console.log(uname, userName);
+    </script>
+</body>
+
+</html>

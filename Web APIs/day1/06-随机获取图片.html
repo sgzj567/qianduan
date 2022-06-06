@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./images/1.webp" alt="">
+    <script>
+        // 1.获取图片
+        let pic = document.querySelector('img')
+            // 2.随机得到图片序号
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let num = getRandom(1, 6)
+            // 3.完成src属性
+        pic.src = `./images/${num}.webp` //反引号记住
+    </script>
+</body>
+
+</html>

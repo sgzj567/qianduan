@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(./images/desktop_1.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let num = getRandom(1, 9)
+            //修改背景图片  因为文本内只有一个body 所以可以直接写
+        document.body.style.backgroundImage = `url(./images/desktop_${num}.jpg)` //缺点是修改的样式  就会加到行内去了
+    </script>
+</body>
+
+</html>

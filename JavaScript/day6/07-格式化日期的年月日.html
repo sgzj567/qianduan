@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 格式化日期的年月日
+        let date = new Date();
+        console.log(date.getFullYear()); //返回当前日期的年
+        console.log(date.getMonth()); //返回当前日期的月 获取当前的月份（0~11）所以会小一个月
+        console.log(date.getMonth() + 1); //所以加1
+        console.log(date.getDate()); //返回当前日期
+        console.log(date.getDay()); //获取星期几  （0~6）周日到 周六 周日返回0
+        // 我们写一个2022年4月25日星期一
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let dates = date.getDate();
+        let day = date.getDay();
+        let arry = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+        console.log('今天是：' + year + '年' + month + '月' + dates + '日 ' + arry[day]);
+    </script>
+</body>
+
+</html>

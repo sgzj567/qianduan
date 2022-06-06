@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid red;
+        }
+        
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let fa = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        fa.addEventListener('click', function() {
+            alert('我是爸爸')
+        })
+        son.addEventListener('click', function(e) {
+                alert('我是儿子')
+                    // 阻止事件冒泡 和捕获
+                e.stopPropagation();
+
+            })
+            // DOM.addEventListener(事件类型,执行函数(){},false/true)里面默认是false  如果是false就只执行冒泡阶段  如果是true就执行捕获阶段
+    </script>
+</body>
+
+</html>

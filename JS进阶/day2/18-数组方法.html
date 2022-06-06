@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // concat 用于拼接数组 两个或者两个以上
+        let arr = [1, 2, 3, 6]
+        let arr1 = ['a', 'a', 'b', 'c'];
+        console.log(arr.concat(arr1));
+        let arr2 = arr.concat(arr1, '张飞', '刘备')
+        console.log(arr2);
+        // join('');连接字符串的每个元素
+        console.log(arr.join('+'));
+        console.log(arr.join());
+        console.log(arr.join('')); //空字符串 数组里面不加任何东西
+        let str = arr.join('-')
+        console.log(str);
+        // splice 删除数组元素元素
+        // 从索引为2的位置删除0个元素 加上'drum'
+        let removed = arr1.splice(2, 0, 'drum')
+        console.log(arr1);
+        // reverse 翻转数组顺序
+        let re = arr.reverse();
+        console.log(re);
+    </script>
+</body>
+
+</html>

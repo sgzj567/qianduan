@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* @keyframes move {
+            from {
+                transform: translate(0px);
+            }
+            to {
+                transform: translateX(1000px);
+            }
+        } */
+        /* 可以做多个状态的变化 keyframe关键帧 */
+        /* 里面的百分数要是整数 */
+        /* 里面的百分数就是时间的划分 */
+        
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(1000px, 0);
+            }
+            50% {
+                transform: translate(1000px, 500px);
+            }
+            75% {
+                transform: translate(0px, 500px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2.调用动画 */
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 10s;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

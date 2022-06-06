@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 利用new Object 创建对象 
+        var obj = new Object(); //创建了一个空的对象 
+        obj.uname = '张三丰';
+        obj.age = '18';
+        obj.sex = 'nan';
+        obj.sayHi = function() {
+                console.log('hi');
+
+            }
+            // 1.我们是利用等号赋值的方法 添加对象的属性和方法
+            // 2.每个属性和方法之间用；分号 隔开
+        console.log(obj.uname);
+        console.log(obj['sex']);
+        obj.sayHi();
+    </script>
+</body>
+
+</html>

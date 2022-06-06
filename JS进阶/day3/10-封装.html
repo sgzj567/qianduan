@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数：当做模板 公共模板 
+        function Person(uname, age, height, weight) {
+            this.uname = uname;
+            this.age = age;
+            this.height = height;
+            this.weight = weight;
+            // 吃饭
+            this.eat = function() {
+                console.log('吃饭');
+            }
+            this.sleep = function() {
+                console.log('睡觉');
+            }
+        }
+        // 实例化对象
+        let obj = new Person('张飞', 22, '180', '180');
+        obj.hei = '黑脸张飞'; //特殊 属性可以自己加
+        console.log(obj);
+        let obj1 = new Person('刘备', 33, '190', '150');
+        console.log(obj1);
+    </script>
+</body>
+
+</html>

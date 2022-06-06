@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>体验flex布局.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            /* flex布局也叫弹性布局 低版本不适应 避免浮动脱离文档流发生 */
+            /* 此时box盒子为弹性容器 也就是给谁添加flex属性谁就是弹性容器 */
+            /* 即使此时高度设为0 也不会脱标 */
+            display: flex;
+            justify-content: space-between;
+            /* height: 200px; */
+            border: 1px solid #000;
+        }
+        /* 让div浮动要用flex布局 就要给父（必须是亲爹）盒子加flex */
+        /* 子级叫做弹性盒子 */
+        
+        .box div {
+            /* 此时如果box高度设为0 子级会脱标 */
+            /* float: left;
+            margin: 10px; */
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

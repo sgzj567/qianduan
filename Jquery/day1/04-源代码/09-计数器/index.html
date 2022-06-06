@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>计数器</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <!-- html结构 -->
+    <div id="app">
+      <!-- 计数器功能区域 -->
+      <div class="input-num">
+        <!-- 减号 -->
+        <button>
+          -
+        </button>
+        <!-- 内容 -->
+        <span>0</span>
+        <!-- 加号 -->
+        <button>
+          +
+        </button>
+      </div>
+      <img src="http://www.itheima.com/images/logo.png" alt="" />
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <!-- 编码 -->
+    <script>
+      // span抽取
+      let $span = $('.input-num span')
+      // 递减
+      // $('.input-num button:first-child')
+      $('.input-num button')
+        .first()
+        .click(function () {
+          console.log('递减')
+          let num = $span.text()
+          if (num == 0) {
+            alert('哥们别点啦,到底啦')
+            return
+          }
+          num--
+          $span.text(num)
+        })
+
+      // 累加
+      // $('.input-num button:last-child')
+      $('.input-num button')
+        .last()
+        .click(function () {
+          console.log('累加')
+          let num = $span.text()
+          if (num == 10) {
+            alert('哥们别点啦,到头啦')
+            return
+          }
+          num++
+          $span.text(num)
+        })
+    </script>
+  </body>
+</html>

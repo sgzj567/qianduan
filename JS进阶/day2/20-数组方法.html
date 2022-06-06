@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 判断一个值是否数组 
+        // Array.isArray()
+        let a = 3;
+        let re = Array.isArray(a);
+        console.log(re);
+        // 把伪数组转换为真数组
+        // Array.from(伪数组)
+        let o = {
+                0: 'a',
+                1: 'b',
+                2: 'c',
+                3: 'd',
+                4: 'e',
+                5: 'f',
+                6: 'h',
+                length: 7,
+            }
+            // o.pop(); 返回的是数组最后一个值并删除 伪数组用不了真数组的方法
+            // 伪数组转换为真数组必须要有length length比较重要
+        let ary = Array.from(o);
+        console.log(ary.pop());
+        console.log(o);
+    </script>
+</body>
+
+</html>

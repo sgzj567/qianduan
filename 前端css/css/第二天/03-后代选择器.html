@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之后代选择器</title>
+    <style>
+        /* 我想把ol里面的li选出来改成pink */
+        /* 元素1 元素2 {样式声明}
+        上述语法表示选择元素1里面的所有元素2（后代元素） 
+        元素1与元素2之间用空格隔开
+        元素1是元素2的父亲，最终选的是元素2
+        元素2可以是儿子也可以是孙子，只要是元素1的后代即可*/
+        
+        ol li {
+            color: pink;
+        }
+        
+        ol li a {
+            color: red
+        }
+        
+        .geshi {
+            text-decoration: none;
+        }
+        
+        .nav li a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol的孩子</li>
+        <li><a href="#" class="geshi">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul的孩子</li>
+        <li><a href="#" class="geshi">我是不会变色的</a></li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul的孩子</li>
+        <li><a href="#" class="geshi">我会变色的</a></li>
+    </ul>
+</body>
+
+</html>

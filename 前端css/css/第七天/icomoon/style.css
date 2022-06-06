@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?yxe367');
+  src:  url('fonts/icomoon.eot?yxe367#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yxe367') format('truetype'),
+    url('fonts/icomoon.woff?yxe367') format('woff'),
+    url('fonts/icomoon.svg?yxe367#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bower:before {
+  content: "\e900";
+  color: #ef5734;
+}
+.icon-civicrm:before {
+  content: "\e901";
+  color: #81c459;
+}
+.icon-co-op:before {
+  content: "\e902";
+  color: #00b1e7;
+}
+.icon-codacy:before {
+  content: "\e903";
+}
+.icon-codeigniter:before {
+  content: "\e904";
+  color: #ee4623;
+}
+.icon-codepen:before {
+  content: "\e905";
+}
+.icon-dell:before {
+  content: "\e906";
+  color: #007db8;
+}
+.icon-discourse:before {
+  content: "\e907";
+}
+.icon-discover:before {
+  content: "\e908";
+  color: #ff6000;
+}
+.icon-baidu:before {
+  content: "\e90c";
+  color: #2319dc;
+}
+.icon-campaignmonitor:before {
+  content: "\e90d";
+  color: #509cf6;
+}
+.icon-cashapp:before {
+  content: "\e90e";
+  color: #00c244;
+}
+.icon-castorama:before {
+  content: "\e90f";
+  color: #0078d7;
+}
+.icon-castro:before {
+  content: "\e910";
+  color: #00b265;
+}
+.icon-cevo:before {
+  content: "\e911";
+  color: #1eabe2;
+}
+.icon-chase:before {
+  content: "\e912";
+  color: #117aca;
+}
+.icon-circle:before {
+  content: "\e913";
+  color: #8669ae;
+}
+.icon-circleci:before {
+  content: "\e914";
+}
+.icon-co-op1:before {
+  content: "\e90b";
+  color: #00b1e7;
+}
+.icon-codacy1:before {
+  content: "\e90a";
+}
+.icon-codecademy:before {
+  content: "\e915";
+  color: #1f4056;
+}
+.icon-codeclimate:before {
+  content: "\e916";
+}
+.icon-codecov:before {
+  content: "\e917";
+  color: #f01f7a;
+}
+.icon-home3:before {
+  content: "\e909";
+}
+.icon-connection:before {
+  content: "\e91b";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-volume-increase:before {
+  content: "\ea2b";
+}
+.icon-volume-decrease:before {
+  content: "\ea2c";
+}
+.icon-arrow-up-left2:before {
+  content: "\ea39";
+}
+.icon-arrow-up2:before {
+  content: "\ea3a";
+}
+.icon-arrow-up-right2:before {
+  content: "\ea3b";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-arrow-down-right2:before {
+  content: "\ea3d";
+}
+.icon-arrow-down2:before {
+  content: "\ea3e";
+}
+.icon-arrow-down-left2:before {
+  content: "\ea3f";
+}
+.icon-arrow-left2:before {
+  content: "\ea40";
+}

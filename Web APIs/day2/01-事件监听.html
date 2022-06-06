@@ -1,0 +1,30 @@
+<!-- 什么是事件监听 -->
+<!-- 就是让程序检测是否有事件发生，一旦有事件发生 就立即调出一个函数做出相应，也称为注册事件 -->
+<!-- 语法 元素：addeventListener('事件'，要执行的函数)  事件是字符串  要小写 -->
+<!-- 事件监听三要素 -->
+<!-- 1.事件源：那个dom元素被事件触发了  要获取dom元素 -->
+<!-- 2.事件：用什么方式触发，比如鼠标单击click  鼠标经过mouseover等 -->
+<!-- 3.事件调用的函数：要做什么事 -->
+<!-- 事件监听 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击我</button>
+    <script>
+        let btn = document.querySelector('button')
+            // 2.事件监听  绑定事件  注册事件  事件侦听
+        btn.addEventListener('click', function() {
+            alert('月薪过万')
+        })
+    </script>
+</body>
+
+</html>

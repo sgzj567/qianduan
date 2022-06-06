@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.通过date获取毫秒数(时间戳) valueOf()  getTime()
+        let date = new Date;
+        console.log(date.valueOf()); //获取从1970年1月1号距离当前过了多少毫秒
+        console.log(date.getTime());
+        // 2.简单的西写法（最常用的写法）
+        var date1 = +new Date();
+        console.log(date1);
+        // 3.H5新增的写法
+        console.log(Date.now());
+    </script>
+</body>
+
+</html>

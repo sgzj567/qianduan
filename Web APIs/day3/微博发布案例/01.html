@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>微博发布</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .w {
+            width: 900px;
+            margin: 0 auto;
+        }
+        
+        .controls textarea {
+            width: 878px;
+            height: 100px;
+            resize: none;
+            border-radius: 10px;
+            outline: none;
+            padding-left: 20px;
+            padding-top: 10px;
+            font-size: 18px;
+        }
+        
+        .controls {
+            overflow: hidden;
+        }
+        
+        .controls div {
+            float: right;
+        }
+        
+        .controls div span {
+            color: #666;
+        }
+        
+        .controls div .useCount {
+            color: red;
+        }
+        
+        .controls div button {
+            width: 100px;
+            outline: none;
+            border: none;
+            background: rgb(0, 132, 255);
+            height: 30px;
+            cursor: pointer;
+            color: #fff;
+            font: bold 14px '宋体';
+            transition: all 0.5s;
+        }
+        
+        .controls div button:hover {
+            background: rgb(0, 225, 255);
+        }
+        
+        .controls div button:disabled {
+            background: rgba(0, 225, 255, 0.5);
+        }
+        
+        .contentList {
+            margin-top: 50px;
+        }
+        
+        .contentList li {
+            padding: 20px 0;
+            border-bottom: 1px dashed #ccc;
+            position: relative;
+        }
+        
+        .contentList li .info {
+            position: relative;
+        }
+        
+        .contentList li .info span {
+            position: absolute;
+            top: 15px;
+            left: 100px;
+            font: bold 16px '宋体';
+        }
+        
+        .contentList li .info p {
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            color: #aaa;
+            font-size: 12px;
+        }
+        
+        .contentList img {
+            width: 80px;
+            border-radius: 50%;
+        }
+        
+        .contentList li .content {
+            padding-left: 100px;
+            color: #666;
+            word-break: break-all;
+        }
+        
+        .contentList li .the_del {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <!-- 操作的界面 -->
+        <div class="controls">
+            <img src="./images/9.6/tip.png" alt="" />
+            <br />
+            <!-- maxlength 可以用来限制表单输入的内容长度 -->
+            <textarea placeholder="说点什么吧..." id="area" cols="30" rows="10" maxlength="200"></textarea>
+            <div>
+                <span class="useCount" id="useCount">0</span>
+                <span>/</span>
+                <span>200</span>
+                <button id="send">发布</button>
+            </div>
+        </div>
+        <!-- 微博内容列表 -->
+        <div class="contentList">
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+    <!-- 添加了hidden属性元素会直接隐藏掉 -->
+    <li hidden>
+        <div class="info">
+            <img class="userpic" src="./images/9.6/03.jpg" />
+            <span class="username">死数据:百里守约</span>
+            <p class="send-time">死数据:发布于 2020年12月05日 00:07:54</p>
+        </div>
+        <div class="content">死数据:111</div>
+        <span class="the_del">X</span>
+    </li>
+
+    <script>
+        // 模拟数据
+        let dataArr = [{
+            uname: '司马懿',
+            imgSrc: './images/9.5/01.jpg'
+        }, {
+            uname: '女娲',
+            imgSrc: './images/9.5/02.jpg'
+        }, {
+            uname: '百里守约',
+            imgSrc: './images/9.5/03.jpg'
+        }, {
+            uname: '亚瑟',
+            imgSrc: './images/9.5/04.jpg'
+        }, {
+            uname: '虞姬',
+            imgSrc: './images/9.5/05.jpg'
+        }, {
+            uname: '张良',
+            imgSrc: './images/9.5/06.jpg'
+        }, {
+            uname: '安其拉',
+            imgSrc: './images/9.5/07.jpg'
+        }, {
+            uname: '李白',
+            imgSrc: './images/9.5/08.jpg'
+        }, {
+            uname: '阿珂',
+            imgSrc: './images/9.5/09.jpg'
+        }, {
+            uname: '墨子',
+            imgSrc: './images/9.5/10.jpg'
+        }, {
+            uname: '鲁班',
+            imgSrc: './images/9.5/11.jpg'
+        }, {
+            uname: '嬴政',
+            imgSrc: './images/9.5/12.jpg'
+        }, {
+            uname: '孙膑',
+            imgSrc: './images/9.5/13.jpg'
+        }, {
+            uname: '周瑜',
+            imgSrc: './images/9.5/14.jpg'
+        }, {
+            uname: '老夫子',
+            imgSrc: './images/9.5/15.jpg'
+        }, {
+            uname: '狄仁杰',
+            imgSrc: './images/9.5/16.jpg'
+        }, {
+            uname: '扁鹊',
+            imgSrc: './images/9.5/17.jpg'
+        }, {
+            uname: '马可波罗',
+            imgSrc: './images/9.5/18.jpg'
+        }, {
+            uname: '露娜',
+            imgSrc: './images/9.5/19.jpg'
+        }, {
+            uname: '孙悟空',
+            imgSrc: './images/9.5/20.jpg'
+        }, {
+            uname: '黄忠',
+            imgSrc: './images/9.5/21.jpg'
+        }, {
+            uname: '百里玄策',
+            imgSrc: './images/9.5/22.jpg'
+        }, ]
+
+
+        // 随机函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+
+
+        let area = document.querySelector('#area')
+        let span = document.querySelector('#useCount')
+        let send = document.querySelector('#send')
+        let ul = document.querySelector('#list')
+
+        // 需求1
+        area.addEventListener('input', function() {
+            // 字符个数
+            span.innerHTML = area.value.length
+        })
+
+        // 需求2：发布功能
+        send.addEventListener('click', function() {
+            // 3.1
+            // 细节3： trim() 解决纯空格问题
+            // '      '.trim() ==> '' 其length是0
+            let text = area.value.trim()
+                // console.log(text, text.length)
+
+            // 细节1： 将area内容清空
+            area.value = ''
+                // 将统计的数量置为0 
+            span.innerHTML = 0
+
+            // 细节2：当获取到area的内容之后，判断是否有内容。如果没有后续代码就不用执行
+            if (text.length === 0) {
+                // 'abc'.length 字符个数
+                // 说明啥： 啥都没写
+                return alert('请输入内容')
+            }
+
+            // 3.2
+            let newLi = document.createElement('li')
+
+            // 创建li的时候，给其随机来设置头像和昵称 
+            //  1. 先随机下标
+            //  2. 根据下标取出对象
+            let index = getRandom(0, dataArr.length - 1)
+                // console.log(index, dataArr[index])
+
+            // new Date().toLocaleString()  得到本地化的时间格式 ==> 快速完成效果
+
+            newLi.innerHTML = `
+        <div class="info">
+          <img class="userpic" src="${dataArr[index].imgSrc}" />
+          <span class="username">${dataArr[index].uname}</span>
+          <p class="send-time">发布于 ${new Date().toLocaleString()}</p>
+        </div>
+        <div class="content">${text}</div>
+        <span class="the_del">X</span>
+      `
+            console.log(newLi)
+
+            // 父元素.insertBefore(添加元素, 在谁前面)   
+            //  第一个的前面   ul.children[0]
+            ul.insertBefore(newLi, ul.children[0])
+
+
+            // 对于删除功能 ==> 由于页面一开始是没有，是当点击发布的时候，才能有删除按钮的存在
+            //  需要将代码写在发布功能的里面
+
+            // 1. 先获取到删除按钮
+            //  拓展：querySelector 和 querySelectorAll方法写法有2种
+            //  1. document.querySelector() ==> 表示从页面中来查找元素
+            //  2. 元素.querySelector() ==> 表示从元素中来查找  缩小范围 查找精确
+
+            // let delBtn = document.querySelector('.the_del')
+            let delBtn = newLi.querySelector('.the_del')
+                // console.log(delBtn)
+
+            // 2. 给删除按钮注册click
+            delBtn.addEventListener('click', function() {
+                // console.log('删除了。。。。')
+                // 删除节点语法 
+                // 父元素.removeChild(删除元素)
+                // 删除元素 ==> newLi
+                // 父元素 ==> ul
+
+                ul.removeChild(newLi)
+            })
+        })
+
+        // 回车发布功能
+        // 给area注册键盘事件，发现按键是回车的话，就进行发布  keydown按下去就开始执行 按下去弹上来开始执行
+        area.addEventListener('keyup', function(e) {
+            // console.log(e.key)
+            if (e.key === 'Enter') {
+                // console.log('敲了回车')
+
+                // 进行发布
+                // 元素.click() 方法 表示模拟用户点击了元素
+                send.click()
+            }
+        })
+    </script>
+</body>
+
+</html>

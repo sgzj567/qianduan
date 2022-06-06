@@ -1,0 +1,352 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    height: 5000px;
+}
+
+
+/* 搜索模块 */
+
+ul {
+    /* 去掉小点 */
+    list-style: none;
+    /* ul li 有默认的mg与padding值所以去掉 */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    /* 去掉下划线 */
+    text-decoration: none;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.search-index {
+    display: flex;
+    /* 固定定位与父级没关系 它以屏幕为主并且他不占位置 */
+    position: fixed;
+    top: 0;
+    /* 相对于父级盒子走一半 */
+    left: 50%;
+    /* 固定定位盒子要有宽度 */
+    width: 100%;
+    /* 相对于自身盒子来说 走一半 */
+    /* 兼容传统浏览器 */
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    /* background-color: pink; */
+    /* 此时盒子在左侧紧贴着左边 */
+    /* 写margin:0 auto 没用 因为Fixed */
+    background-color: #F6F6F6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* 虽然a是行内元素 需要设置block属性 但是左边有了flex属性就不要设置了 */
+
+.user {
+    width: 44px;
+    height: 44px;
+    /* background-color: purple; */
+    font-size: 12px;
+    text-align: center;
+    color: #2eaae0;
+}
+
+.user::before {
+    content: "";
+    /* 为元素是行内元素 不能设置宽高 所以需要转换为块级元素 */
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -60px -195px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+}
+
+.search {
+    position: relative;
+    height: 26px;
+    /* 此时文字会相对偏下 因为用的css3模型 行高不应该算边框 */
+    /* line-height: 26px; */
+    line-height: 24px;
+    padding-left: 25px;
+    border: 1px solid #ccc;
+    flex: 1;
+    font-size: 12px;
+    color: #666;
+    margin: 8px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+}
+
+.search::before {
+    content: "";
+    /* display: block; */
+    /* 加了绝对定位的元素就会有大小了 */
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) -60px -280px;
+    background-size: 104px auto;
+    /* 改为position之后mg就不起效果了 */
+    /* margin: 7px 5px; */
+}
+
+
+/* 上面的固定定位不占用位置所以此时图片回向上走 */
+
+
+/* 给它一个内边距就不会向上了 */
+
+.focus {
+    padding-top: 44px;
+}
+
+.focus img {
+    width: 100%;
+}
+
+
+/* 局部导航栏 */
+
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 3px 4px;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 */
+    align-items: center;
+    font-size: 12px;
+}
+
+.local-nav li [class^=local-nav-icon] {
+    width: 32px;
+    height: 32px;
+    background-color: pink;
+    /* flex: 布局不会出现外边距合并问题 */
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+
+.local-nav li .local-nav-icon-icon2 {
+    background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+    background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+    background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+    background-position: 0 -128px;
+}
+
+nav {
+    /* 加上溢出隐藏就会呈现出圆角盒子 */
+    overflow: hidden;
+    /* 此时nav盒子去掉了圆角 但是div盒子没有会溢出nav盒子 */
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: pink;
+}
+
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+}
+
+.nav-items {
+    /* 不冲突 */
+    display: flex;
+    flex: 1;
+}
+
+
+/* 前两个 */
+
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+.nav-items:nth-child(n+2) {
+    flex-direction: column;
+}
+
+.nav-items a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+
+/* 取消第一列a的边框 */
+
+.nav-items:nth-child(1) a {
+    border: 0;
+    /* 底端对齐 水平居中 */
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+.nav-items a {
+    flex: 1;
+    /* 水平对齐方式 */
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, .2)
+}
+
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4C93ED, #53BAED);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #35C2A8, #6BD45A);
+}
+
+.subnav-entry {
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    padding: 5px 0;
+}
+
+.subnav-entry ul {
+    flex-wrap: wrap;
+    /* 换行 */
+    display: flex;
+}
+
+.subnav-entry ul li {
+    /* 里面也可以写百分数 */
+    flex: 20%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav-entry-icon {
+    /* 虽然span是行模块但是由于父级设置了display属性所以可以设置宽度 */
+    width: 28px;
+    height: 28px;
+    background-color: pink;
+    margin-top: 2px;
+    background: url(../images/subnav-bg.png) no-repeat 0 4px;
+    background-size: 24px auto;
+}
+
+.sales-box {
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+    margin: 4px;
+}
+
+.sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+    position: relative;
+    /* 执行文本块中第一行缩进 */
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales-hd h2::after {
+    /* 伪元素不能设置宽高 但是给了定位之后就可以设置了 */
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    content: "";
+    width: 79px;
+    height: 15px;
+    background-color: pink;
+    background: url(../images/hot.png) no-repeat 0 -19px;
+    background-size: 79px auto;
+}
+
+.more {
+    position: absolute;
+    top: -3px;
+    right: 8px;
+    background: -webkit-linear-gradient(left, #ff506c, #A092D4);
+    border-radius: 8px;
+    /* 因为没有写宽高所以才可以撑开 */
+    padding: 3px 20px 3px 10px;
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    /* 通过css3做三角模型 */
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+
+.row a img {
+    /* 此时高度也跟着缩放 */
+    width: 100%;
+}

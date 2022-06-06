@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1个小li</li>
+        <li>我是第2个小li</li>
+        <li>我是第3个小li</li>
+        <li>我是第4个小li</li>
+        <li>我是第5个小li</li>
+    </ul>
+    <script>
+        // 不要每个小li注册事件  而是委托给他的爸爸
+        // 事件委托是给父级添加事件
+        // 原理  利用的是事件冒泡原理  给父元素添加事件  子元素可以触发
+        let ul = document.querySelector('ul')
+        ul.addEventListener('click', function(e) {
+            // alert('我点击了')
+            // 得到当前的元素
+            // console.log(e.target);得到当前元素
+            e.target.style.color = 'red'
+        })
+    </script>
+</body>
+
+</html>

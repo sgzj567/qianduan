@@ -1,0 +1,28 @@
+.header{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    // less嵌套 子元素的样式直接写到父元素里面去
+    a{
+        color:pink;
+        // 此时过去的是不对的表示的是给a后代加blue 即.header a :hover {
+//   color: blue; a后面有空格了
+        // :hover{
+        //     color: blue;
+        // }
+    // 要想给a加伪类选择器必须前面加& 交集选择器 伪元素选择器也一样
+    &:hover{
+        color: blue;
+    }
+    }
+}
+
+.nav{
+    .logo{
+        color: green;
+    }
+    &::before{
+        content:"";
+
+        }
+}

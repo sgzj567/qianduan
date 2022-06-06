@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="点击">
+    <script>
+        // 箭头函数的使用
+        // 定时器
+        // window.setInterval(function(){console.log('定时器')},1000);
+        // window.setInterval(() => {
+        //     console.log('定时器'), 1000;
+        // })
+        //1. 注意点箭头函数不存在预解析，所以必须先定义再调用
+        let fn = (b) => {
+            console.log(b);
+        }
+        fn(90);
+        //2. 箭头函数不存在arguments
+        // let fun = () => {
+        //     console.log(arguments[i]);
+        // }
+        // fun(89, 3, 56);
+        let fun = (...a) => {
+            console.log(a);
+        }
+        fun(90, 34, 22, 4);
+        // 3.箭头函数中不存在this  箭头函数中的this指的是上级作用域的this 
+        // 函数中的this谁调用指向谁
+        let obj = {
+            uname: '张三丰',
+            age: 22,
+            taiji: function fn() {
+                console.log(this);
+            }
+        }
+        obj.taiji();
+        // 如果涉及到this的指向问题的时候就少用箭头函数
+        let btn = document.querySelector('input')
+            // btn.addEventListener('click', () => {
+            //     this.style.background = 'red'; //出现报错
+            // })
+        btn.addEventListener('click', function() {
+            this.style.background = 'red'
+        })
+    </script>
+</body>
+
+</html>

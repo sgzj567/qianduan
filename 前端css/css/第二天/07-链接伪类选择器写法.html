@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+        body {
+            color: red;
+            /* 此时不变颜色 */
+        }
+        /* 要想给链接指定颜色必须单独给定 */
+        /* 要想给链接设置必须单独给定 */
+        
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        /* 伪类选择器实际工作开发中的写法：
+        a 是标签选择器 所有的链接
+        a {
+            color:gray;
+                       }
+         */
+        /* :hover是链接伪类选择器 鼠标经过 */
+        /* a: hover {
+           color: red;鼠标经过由原来灰色变为红色
+        } */
+    </style>
+</head>
+
+<body>
+    <a href="#">小猪佩奇</a>
+    <a href="http://www.xxxxxx.com">未知的网站</a>
+</body>
+
+</html>

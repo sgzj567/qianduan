@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.创建类  创建一个明星类
+        class Start {
+            constructor(uname, age) {
+                this.uname = uname
+                this.age = age
+            }
+            sing(song) {
+                // console.log('我唱歌');
+                // console.log(song);
+                console.log(this.uname + song);
+
+            }
+        }
+        // 2.利用创建对象
+        var ldh = new Start('刘德华')
+        var zxy = new Start('张学友', 19)
+        console.log(ldh.uname);
+        console.log(zxy.age);
+        console.log(zxy);
+        console.log(zxy.uname, zxy.age);
+        // ldh.sing()
+        // 多个函数之间方法不需要添加逗号
+        ldh.sing('冰雨')
+        zxy.sing('李香兰');
+    </script>
+</body>
+
+</html>

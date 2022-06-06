@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // continue 关键字
+        for (var i = 1; i <= 3; i++) {
+
+            if (i == 3) {
+                continue; // 只要遇见continue就跳出本次循环 直接跳出i++
+            }
+            console.log('我正在吃' + i + '个包子');
+
+        }
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum);
+    </script>
+</body>
+
+</html>

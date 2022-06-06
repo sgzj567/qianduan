@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动注意点 </title>
+    <style>
+        /* 先用标准流的父元素排列上下位置 之后内部元素采用浮动排列左右位置 */
+        /* 一个元素浮动了，理论其他兄弟元素也要浮动 以防止引起问题
+        浮动的盒子只会引起浮动盒子后面的标准流，不会影响到前面的标准流 */
+        
+        .box {
+            width: 900px;
+            height: 300px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        
+        .damao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 150px;
+            background-color: red;
+        }
+        
+        .sanmao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <div class="sanmao">三毛</div>
+    </div>
+</body>
+
+</html>

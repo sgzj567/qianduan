@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 有一个对象  来判断是否 有该属性   对象['属性名']
+        /*      let o = {
+                 age: 18
+             }
+             if (o['age']) {
+                 console.log('有该属性');
+
+             } else {
+                 console.log('没有该属性');
+
+             } */
+        let str = 'abcoefoxyozzopp'
+        let o = {};
+        for (let i = 0; i < str.length; i++) {
+            let chars = str.charAt(i); //charts是字符串的每一个字符
+            if (o[chars]) { //o[charts]是属性值
+                o[chars]++;
+
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        //2.遍历对象
+        let max = 0;
+        let ch = '';
+        for (let k in o) {
+            if (o[k] > max) {
+                max = o[k]; //k是属性名  o[k]得到属性值
+                ch = k; //这不是添加是替换
+            }
+
+        }
+        console.log(max);
+        console.log('最多的字符是：' + ch);
+    </script>
+</body>
+
+</html>

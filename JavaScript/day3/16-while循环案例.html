@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //打印一个人的一生
+        var i = 1;
+        while (i <= 100) {
+            console.log('你今年' + i + '岁了');
+            i++;
+        }
+        // 2.计算1-100之间所有的整数和
+        var sum = 0;
+        var j = 1;
+        while (j <= 100) {
+            sum += j;
+            j++;
+        }
+        console.log(sum);
+        // 3.弹出一个提示框
+        // 1.弹出一个输入框 你爱我吗 如果输入我爱你 就提示结束 否则一直询问。
+        var message = prompt('你爱我吗');
+        while (message !== '我爱你') {
+            message = console.log('你爱我吗');
+
+        }
+        alert('我也爱你');
+    </script>
+</body>
+
+</html>

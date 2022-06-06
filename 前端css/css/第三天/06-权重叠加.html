@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>权重的叠加</title>
+    <style>
+        /* 复合选择器会有权重叠加的问题 */
+        /* li的权重 0,0,0,1 */
+        
+        li {
+            color: red;
+        }
+        /*ul li的权重 0,0,0,1,+0,0,0,1=0,0,0,2 */
+        
+        ul li {
+            color: green;
+        }
+        /* .nav li 权重 0,0,0,1+0,0,0,1,=0,0,1,1  11 */
+        
+        .nav li {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>大猪蹄子</li>
+        <li>大肘子</li>
+        <li>猪尾巴</li>
+    </ul>
+</body>
+
+</html>

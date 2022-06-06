@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*nth-child选择的是第几个孩子不分属性  */
+        /* div后面有空格 下面选择的是第一个孩子 */
+        
+        div :nth-child(1) {
+            background-color: pink;
+        }
+        
+        div :nth-child(2) {
+            background-color: purple;
+        }
+        /* 这个选不到 */
+        
+        div span:nth-child(1) {
+            background-color: pink;
+        }
+        /* 这个选的是div里面的第二个元素 且是span标签的元素 */
+        
+        div span:nth-child(2) {
+            background-color: pink;
+        }
+        /* 总结nth-child选的是父元素里面的第n个元素 他不管里面的是不是同一种元素 */
+        /* of-type选择指定类型的元素 */
+        /* 选择的是div里面的span元素的第一个 */
+        
+        div span:first-of-type {
+            background-color: purple;
+        }
+        
+        div span:last-of-type {
+            background-color: skyblue;
+        }
+        
+        div span:nth-of-type(2) {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>抵制俄罗斯</p>
+        <span>我是span</span>
+        <span>我是span</span>
+        <span>我是span</span>
+    </div>
+    <!-- ul里面我们只允许放li 所以nth-child与nth-of-child一样 -->
+    <ui>
+        <Li>1</Li>
+        <Li>2</Li>
+        <Li>3</Li>
+        <Li>4</Li>
+        <Li>5</Li>
+        <Li>6</Li>
+        <Li>7</Li>
+        <Li>8</Li>
+        <Li>9</Li>
+        <Li>10</Li>
+    </ui>
+</body>
+
+</html>

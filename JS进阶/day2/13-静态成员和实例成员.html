@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        // 实例化对象
+        let obj = new Star('刘德华', '23');
+        // console.log(obj);
+        console.log(Star); //打印出属性和方法
+        // star构造函数也属于对象  对象身上可以添加属性 方法
+        Star.language = '汉语';
+        Star.skin = '黄皮肤'; //静态属性
+        Star.chi = function() { //静态方法
+            console.log(123);
+        }
+        console.log(obj.uname);
+        console.log(obj.language); //实例对象访问不了静态成员 只能由实例对象访问
+        console.log(Star.language); //静态成员只能由构造函数访问
+        // 我们把构造函数身上直接添加的成员  称为静态成员（静态成员 静态方法）
+        // 构造函数内部为实例对象准备的成员，称为实例成员
+    </script>
+</body>
+
+</html>

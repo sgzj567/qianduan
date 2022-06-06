@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS属性之字体符合属性</title>
+</head>
+
+<body>
+    <style>
+        div {
+            /* font-style: italic; 
+            font-size: 16px;
+            font-family: "Microsoft yahei";*/
+            font-weight: 700;
+            /* font:font-style font-weight font-size/line-weight font-family;顺序不能颠倒 
+            并且各个属性之间以空格隔开 */
+            /* 复合属性：简写的方式 节约代码 */
+            /* 如果简写可以省略style weight （16px microsoft）但不能省略size family 否则font属性不起作用 */
+            font: italic 700 16px "Microsoft yahei"
+        }
+    </style>
+
+</body>
+<div>三生三世十里桃花，一心一意一百行代码</div>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        display: inline-block;
+        width: 100px;
+        height: 20px;
+        border: 1px solid black;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+    抽中的选手是：
+    <div></div>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let arr = ['张三', '张三丰', '张三子', '李四', '李思思', '刘备', 'pink老师', '关羽', '习近平', '彭丽媛']
+        let random = getRandom(0, arr.length - 1);
+        let box = document.querySelector('div');
+        box.innerHTML = arr[random];
+    </script>
+</body>
+
+</html>

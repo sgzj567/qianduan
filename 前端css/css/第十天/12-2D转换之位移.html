@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* x轴就是x轴上移动的位置 y轴就是y轴移动的位置 之间用逗号隔开 */
+            /* transform: translate(x,y); */
+            /* transform: translate(100px,100px); */
+            /* transform: translate(100px, 0); */
+            /* 或者分开写 */
+            /* transform: translateX(100px);*/
+            /* transform: translateY(100px);*/
+        }
+        
+        div:first-child {
+            transform: translate(100px, 100px);
+        }
+        
+        div:last-child {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

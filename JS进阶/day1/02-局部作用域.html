@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn() {
+            let n = 2;
+
+        }
+        // 局部变量：在局部作用域声明的变量  只能在函数内部使用
+        // 在函数执行完后会关闭作用域空间  同时会销毁局部变量
+        fn();
+        // console.log(n);输出不了
+        function fun() {
+            console.log(n);
+        }
+        // fun();使用不了
+        function fun(a, b) {
+            // 形参相当于局部变量
+            console.log(a, b);
+        }
+        fun(2, 3);
+    </script>
+</body>
+
+</html>

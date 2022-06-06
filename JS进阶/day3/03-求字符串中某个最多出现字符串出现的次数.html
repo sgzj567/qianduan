@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // find:用于查找首次出现的满足条件值，并返回 没有就是undefined
+        let re = [2, 4, 5, 6, 7, 3].find(function(item, index, o) {
+            return item > 25;
+        })
+        console.log(re);
+        // findIndex:用于查找首次出现的满足条件值，并返回索引值 没有就是-1
+        let re1 = [2, 4, 5, 6, 7, 3].findIndex(function(item, index, o) {
+            return item > 15;
+        })
+        console.log(re1); //返回索引值
+        // some:用于查找如果有一个满足条件返回true
+        let re2 = [2, 4, 5, 6, 7, 3].some(function(item, index, o) {
+            return item > 17
+        })
+        console.log(re2);
+        // every：用于查找满足条件的元素 ，如果都满足返回true 否则就是false
+        let re3 = [2, 4, 5, 6, 7, 3].every(function(item, index, o) {
+            return item > 1
+        })
+        console.log(re3);
+        // filter 筛选数组 把满足条件的元素放到新数组返回
+        let re4 = [2, 4, 5, 6, 7, 3].filter(function(item, index, o) {
+            return item > 2
+        })
+        console.log(re4);
+        // map:遍历数组让每个元素执行一遍回调函数，把所有数组结果放到新数组返回
+        let re5 = [2, 4, 5, 6, 7, 3].map(function(item, index, o) {
+            return item * item
+        })
+        console.log(re5);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <ul>
+        <li>我是内容111</li>
+    </ul>
+    <script>
+        // 获取元素 删除接节点必须找到节点的父元素
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        btn.addEventListener('click', function() {
+                // <!-- 父元素.removeChild() -->children返回的是一个伪数组  等价于querySelectorAll
+                ul.removeChild(ul.children[0])
+            })
+            // 重点如果不存在父子关系则删除不成功
+            /*   删除节点和隐藏节点display：none) 有区别的  隐藏节点还是存在的  但是删除就在HTML中没有了 */
+    </script>
+</body>
+
+</html>

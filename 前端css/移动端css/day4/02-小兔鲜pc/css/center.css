@@ -1,0 +1,40 @@
+.xtx_body {
+    padding: 30px 0 85px;
+    background-color: #f6f6f6;
+}
+
+.xtx_body .wrapper {
+    display: flex;
+}
+
+
+/* 侧边栏 */
+
+.xtx_body .aside {
+    width: 227px;
+    /* 该min-height属性定义元素的最小高度。
+      如果内容小于最小高度，将应用最小高度。
+      如果内容大于最小高度，则该 min-height属性无效。 */
+    min-height: 500px;
+    margin-right: 18px;
+    background-color: pink;
+}
+
+.xtx_body .main {
+    flex: 1;
+    min-height: 500px;
+    background-color: skyblue;
+}
+
+
+/* 用户账户概览 */
+
+.overview {
+    height: 132px;
+    margin-bottom: 18px;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+
+/*用户账户概览 */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多重转换</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+        
+        img {
+            width: 200px;
+            transition: all 5s;
+        }
+        
+        .box:hover img {
+            /* 边走边转效果 */
+            /* 不能先写旋转 再写位移  因为这里的x轴是img的坐标轴 它是随时变动的*/
+            transform: translateX(600px) rotate(700deg);
+            /* 也不能单独写 */
+            /* 这样会重叠 */
+            /* transform: translateX(600px);
+            transform: rotate(700deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/tyre.png" alt="">
+        <!-- <img src="images/tyre1.png" alt=""> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let var const
+        // var :用于声明一个变量
+        // var声明的变量不具有块级作用域
+        // 例如
+        // var
+        {
+            var n = 9;
+        }
+        console.log(n); //可以输出
+        var a = 9;
+        var a = 8;
+        console.log(a); //输出8 var 声明的变量可以重复声明  let 不可以
+        // var 声明的变量相当于给window添加属性  let直接就是变量不属于window
+        var j = 3;
+        console.log(window);
+        // let 与var都可以只定义不赋值 一个变量只定义不赋值 就是undefined
+        // let c;
+        // var b;
+        /*  {
+             let m = 8; //具有块级作用域  外面不可以使用
+         }
+         console.log(m); //输出不了 */
+        // const 声明的变量 不准改变  称为常量
+        // 其他的和let一样  但是定义的时候必须赋值 也就是初始化赋值
+        // 建议
+        // 1.常量名都用大写  纯大写
+        // 2.一般固定不变的量的值使用常量 比如出生年月
+        const NUM = 123;
+        console.log(NUM);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .countdown {
+            width: 240px;
+            height: 305px;
+            text-align: center;
+            line-height: 1;
+            color: #fff;
+            background-color: brown;
+            /* background-size: 240px; */
+            /* float: left; */
+            overflow: hidden;
+        }
+        
+        .countdown .next {
+            font-size: 16px;
+            margin: 25px 0 14px;
+        }
+        
+        .countdown .title {
+            font-size: 33px;
+        }
+        
+        .countdown .tips {
+            margin-top: 80px;
+            font-size: 23px;
+        }
+        
+        .countdown small {
+            font-size: 17px;
+        }
+        
+        .countdown .clock {
+            width: 142px;
+            margin: 18px auto 0;
+            overflow: hidden;
+        }
+        
+        .countdown .clock span,
+        .countdown .clock i {
+            display: block;
+            text-align: center;
+            line-height: 34px;
+            font-size: 23px;
+            float: left;
+        }
+        
+        .countdown .clock span {
+            width: 34px;
+            height: 34px;
+            border-radius: 2px;
+            background-color: #303430;
+        }
+        
+        .countdown .clock i {
+            width: 20px;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="countdown">
+        <p class="next">今天是2022年5月9日</p>
+        <p class="title">下班倒计时</p>
+        <p class="clock">
+            <span id="hour">00</span>
+            <i>:</i>
+            <span id="minutes">25</span>
+            <i>:</i>
+            <span id="second">20</span>
+        </p>
+        <p class="tips">
+            现在是18:30:00
+        </p>
+    </div>
+    <script>
+        // 如果是id他就是唯一的  不用获取就可以打印  但是有的浏览器不行 兼容性问题
+        let hour = document.querySelector('#hour')
+        let minutes = document.querySelector('#minutes')
+        let seconds = document.querySelector('#second')
+        getCount() //避免1秒的空白期
+        setInterval(getCount, 1000)
+
+        function getCount() {
+            // 得到现在的时间戳
+            let now = +new Date() // let now = Date.now
+                // 得到指定时间戳
+            let last = +new Date('2022-5-9 18:30:00')
+                // 计算剩余时间
+            let count = (last - now) / 1000
+                // 转换时分秒
+            let d = parseInt(count / 60 / 60 / 24); //计算天数
+            let h = parseInt(count / 60 / 60 % 24); //计算小时
+            h = h < 10 ? '0' + h : h
+            let m = parseInt(count / 60 % 60); //计算分数
+            m = m < 10 ? '0' + m : m
+
+            let s = parseInt(count % 60);
+            s = s < 10 ? '0' + s : s
+
+            hour.innerHTML = h
+            minutes.innerHTML = m
+            seconds.innerHTML = s
+        }
+    </script>
+</body>
+
+</html>

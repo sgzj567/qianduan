@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 内存：
+        // var n;
+        // var m;
+        // 预解析  代码在执行之前 先要预解析  解析只会解析声明的变量
+        // 变量提升
+        // 变量：会把代码中声明的变量，提前解析到当前作用域最前面，但是只定义，不赋值
+        console.log(n); //undefined没被赋值
+        var n = 3;
+        /*   相当于
+          var n; //预解析  但是没被赋值
+          console.log(n)
+          n = 3 */
+        /*  var n = 23;
+         var m = 45;
+         if (true) {
+             console.log(n + m);
+         } */
+    </script>
+</body>
+
+</html>

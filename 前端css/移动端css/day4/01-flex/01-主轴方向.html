@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .box li {
+            display: flex;
+            /* 一旦修改了主轴方向 再选择对应的属性 实现主轴或者侧轴对齐 */
+            /* 修改主轴方向 为垂直方向 此时侧轴就变为水平方向了*/
+            flex-direction: column;
+            /* 视觉效果:盒子水平居中 */
+            /* 此时主轴改变 想要水平方向居中 就要侧轴对齐 */
+            align-items: center;
+            /* 主轴方向子级盒子无间隔 子盒子居中显示 */
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+        }
+        
+        .box img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="./images/media.png" alt="">
+                <span>媒体</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>我是第一个盒子 </div>
+    <div>我是第二个盒子</div>
+    <div class="three">我是第三个盒子</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        // js获取元素
+        // let div = document.querySelector('div') //里面是字符串 一定要有引号 获取的是对象 是根据css选择器来获取dom 元素的  选择的是匹配第一个元素
+        let div = document.querySelector('.three')
+        console.log(div);
+
+        let li = document.querySelector('ul li:last-child')
+        console.log(li);
+
+        // 2.获取多个选择器  小驼峰命名法
+
+        let lis = document.querySelectorAll('ul li') //.querySelectorAl获取的是伪数组  有长度 索引号 没有pop push 方法
+            // console.log(lis);
+            //  通过遍历的方法  获得里面的每一个dom对象（元素）
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+
+        }
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数
+        function Person() {
+            this.head = 1;
+            this.eyes = 2;
+            this.legs = 2;
+            this.say = function() {
+                console.log('说话');
+            }
+            this.eat = function() {
+                console.log('吃饭');
+            }
+        }
+
+        function Chinese() {
+            this.language = '汉语';
+            this.skin = 'yellow';
+        }
+
+        function Japanese() {
+            this.language = '日语';
+            this.skin = 'yellow';
+        }
+        Chinese.prototype = new Person();
+        Chinese.prototype.constructor = Chinese;
+        console.log(Chinese.prototype);
+        // 实例化对象
+        let c1 = new Chinese();
+        console.log(c1);
+        // 1.把对象赋值给原型对象
+        Japanese.prototype = new Person();
+        // 2.指回构造函数
+        Japanese.prototype.constructor = Japanese;
+        let j1 = new Japanese();
+        console.log(j1);
+    </script>
+</body>
+
+</html>

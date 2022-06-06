@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // clientWidth可见元素部分宽度（不包含边框 滚动条）
+        // 当窗口发生变化的时候  做出响应
+        window.addEventListener('resize', function() {
+            // console.log(111);
+            // console.log(document.documentElement.clientWidth);
+            let w = document.documentElement.clientWidth
+            if (w < 920) {
+                document.body.style.backgroundColor = 'pink'
+            }
+        })
+    </script>
+</body>
+
+</html>

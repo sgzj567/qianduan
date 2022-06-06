@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="点击获取验证码">
+    <script>
+        // bind:函数.bind(this,arg1,arg2,.....)
+        // 不会让函数立即执行
+        function fn(a, b) {
+            console.log(this, a, b);
+        }
+        let obj = {
+            uname: '李寻欢',
+            age: 22,
+        }
+        fn.bind(obj); //不会立刻调用函数
+        // let re = fn.bind(obj);
+        fn.bind(obj)(123, 34); //等价于上一行
+        let btn = document.querySelector('input');
+        btn.addEventListener('click', function() {
+            // 禁用按钮
+            this.disabled = true;
+            // 开启定时器
+            window.setTimeout(function() {
+                    this.disabled = false; //此时如果btn是this的话指向window
+                }.bind(this), 5000) //这里的this指向btn
+
+        })
+    </script>
+</body>
+
+</html>

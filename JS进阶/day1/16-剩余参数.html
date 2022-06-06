@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun(a, b, c, d, e) {
+            console.log(a, b, c, d, e);
+        }
+        fun(undefined, 1, 3, 4, 6); //如果不想传入某个参数可以用undefined
+        // 剩余参数只能用于末尾的参数
+        function fun(a, b, ...c) {
+            console.log(a, b, c);
+        }
+        fun(1, 3, 4, 6, 5, 7); //把4 5 6 7当做数组传入到c中 就是把剩余的值传给c中
+        // 不固定的参数可以采用剩余参数或者动态参数
+        function getSum(...a) {
+            let sum = 0;
+            for (let i = 0; i < a.length; i++) {
+                sum = sum + a[i];
+            }
+            console.log(sum);
+        }
+        getSum(23.45, 56);
+    </script>
+</body>
+
+</html>

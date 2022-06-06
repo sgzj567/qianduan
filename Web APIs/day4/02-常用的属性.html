@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1900px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('click', function(e) {
+                console.log(11);
+                console.log(e.clientX); //clientX/Y获取到的是触发点相对浏览器可视区域左上角距离，不随页面滚动而改变
+                console.log(e.offsetX); //offsetX/Y获取到是触发点相对被触发dom的左上角距离，不过左上角基准点在不同浏览器中有区别，其中在IE中以内容区左上角为基准点不包括边框，如果触发点在边框上会返回负值，而chrome中以边框左上角为基准点。
+                console.log(e.pageX); //pageX/Y获取到的是触发点相对文档区域左上角距离，会随着页面滚动而改变
+            })
+            // clientX/clientY获取相当于可见窗口光标左上角的坐标
+            // offsetX/offsetY获取相当于盒子里面左上角的坐标
+            // pageX/page原文档坐标的关系
+    </script>
+</body>
+
+</html>

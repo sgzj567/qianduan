@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 1366px;
+            height: 600px;
+            background: url(./images/bg.jpg);
+            margin: 0 auto;
+            /* 超出.box自动元素 */
+            overflow: hidden;
+        }
+        /* 伪元素默认是行内元素 */
+        
+        .box::after,
+        .box::before {
+            float: left;
+            content: '';
+            width: 50%;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+            /* 谁移动给谁加时间 */
+            transition: all 0.5s;
+        }
+        
+        .box::after {
+            background-position: right 0;
+        }
+        
+        .box:hover::after {
+            transform: translateX(100%);
+        }
+        /* .box:hover .box::before 错误写法 */
+        
+        .box:hover::before {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

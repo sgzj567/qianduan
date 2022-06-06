@@ -1,0 +1,27 @@
+<html> </html>双标签通常是成对出现的
+1.2双标签关系可分为：包含关系 并列关系
+1.包含关系
+<head>
+
+<title></title>
+
+</head>
+
+2.并列关系
+
+<head></head>
+<body></body>
+<br />第一个单标签
+<html></html>最大的根标签
+<head></head>文档的头部 注意在head的标签中我们必须要设置的标签是title
+<title></title>让页面拥有一个属于自己的标题
+<body><body>文档的主体 元素包含文档的所有 内容  页面内容基本上是放到<body><body>里面
+ 
+<!DOCTYPE> 文档类型声明标签 
+<!DOCTYPE HTML> 声明此文档类型以HTML5来显示当前页面
+<html lang ="zn-CN"> 定义语言为中文
+ en 定义语言为英语
+
+<meta charset="UTF-8 "/>
+4.标签语义
+在合适的地方放标签 能更好的理解文章语义

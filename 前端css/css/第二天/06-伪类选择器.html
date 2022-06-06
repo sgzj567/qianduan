@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+        /* 一定不要调换顺序LVHA顺序
+        口诀 love hate */
+        /* 1.未被访问的标签 a:link*/
+        
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+        /* 2.a:visited 选择点击过得（访问过得）链接 */
+        
+        a:visited {
+            color: orange;
+        }
+        /* 3.选择经过的那个链接 */
+        
+        a:hover {
+            color: skyblue;
+        }
+        /* 4. a:active 选择的是我们鼠标正在按下还没有弹起鼠标的那个链接 */
+        
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<br>
+<a href="">小猪佩奇</a></br>
+<a href="http://www.xxxxxxx.com">未被访问过得链接</a>
+
+</body>
+
+</html>

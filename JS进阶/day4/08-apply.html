@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // apply:函数.apply(this,[arg1,arg2,....]) 传参要放到数组里面
+        // call(this,arg,arg,arg)
+        // function fn(a, b) {
+        //     console.log(this, a, b);
+        // }
+        // let obj = {
+        //     uname: '阿飞'
+        // };
+        // fn.apply(obj, [11, 24]);
+        let obj = {
+            uname: '张三丰',
+            age: 22,
+            taiji: function() {
+                console.log(this);
+            }
+        }
+        let o = {
+            uname: '张无忌',
+            age: 16,
+        }
+        obj.taiji.apply(o)
+            // 数组：
+        let arr = [23, 66, 19, 233];
+        // Math.max()这个方法里面只能写数字 不能写数组 Math是对象
+        let re = Math.max.apply(null, arr);
+        console.log(re);
+        // ...扩展运算符  叫rest参数
+        let re2 = Math.max(...arr);
+        console.log(re2);
+    </script>
+</body>
+
+</html>

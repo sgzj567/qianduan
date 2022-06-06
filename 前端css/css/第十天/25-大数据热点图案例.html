@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        
+        .map {
+            position: relative;
+            width: 747px;
+            height: 616px;
+            background: url(media/map.png) no-repeat;
+            margin: 0 auto;
+        }
+        
+        .city {
+            position: absolute;
+            top: 244px;
+            right: 126px;
+            color: #fff;
+        }
+        
+        .jx {
+            top: 500px;
+            right: 80px;
+        }
+        
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+        
+        .city div[class^="pulse"] {
+            /*以下四行保证小波纹在父盒子水平居中 放大后会向四周发散 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: pulse 1.2s linear infinite;
+        }
+        /* .city 权重是10 div是1 [class="pulse"]权重10; */
+        /* 下面的权重是1 */
+        
+        .city div.pulse2 {
+            animation-delay: 0.4s;
+        }
+        
+        .city div.pulse3 {
+            animation-delay: 0.8s;
+        }
+        
+        @keyframes pulse {
+            0% {}
+            70% {
+                /* 不要用scale 他会把阴影放大 */
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+            100% {
+                width: 70px;
+                height: 70px;
+                /* 透明度 */
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city jx">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

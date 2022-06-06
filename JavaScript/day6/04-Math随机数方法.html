@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Math对象随机数方法  random() 返回一个随机的小数  0 =< x <1
+        // 2.这个方法里面不跟参数
+        // Math.random() 函数返回一个浮点数,  伪随机数在范围从0到小于1，也就是说，从0（包括0）往上，但是不包括1（排除1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。
+        console.log(Math.random());
+
+        // 得到一个两数之间的随机整数
+        // 这个例子返回了一个在指定值之间的随机整数。 这个值不小于 min（ 如果 min 不是整数， 则不小于 min 的向上取整数）， 且小于（ 不等于） max。
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        console.log(getRandomInt(5, 9));
+
+        // 得到一个两数之间的随机整数  并且包含这两个整数
+        // Math.floor(Math.random()*(max-min+1))+min;
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 10));
+        // 5.随机点名
+        let arr = ['张三', '张三丰', '张三子', '李四', '李思思']
+        console.log(arr[getRandom(0, arr.length - 1)]);
+    </script>
+</body>
+
+</html>

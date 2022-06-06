@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            display: flex;
+            /* 主轴方向子级盒子无间隔 子盒子居中显示 */
+            /* justify-content: center; */
+            /* 主轴方向 弹性盒子之间出现间隔 与弹性容器没有间隔 即两边贴边 再分配剩余空间*/
+            /* justify-content: space-between; */
+            /*主轴方向 所有地方间距都相等 */
+            justify-content: space-evenly;
+            /* 给弹性盒子 两边加间距 视觉效果是父级两头距离的2倍 即平均分配剩余空间*/
+            /* justify-content: space-around; */
+            /* 下面的是默认的 即从头部开始对齐*/
+            /* justify-content: flex-start; */
+            /* 下面的是默认的 即从尾部开始对齐*/
+            /* justify-content: flex-end; */
+            height: 200px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+        
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

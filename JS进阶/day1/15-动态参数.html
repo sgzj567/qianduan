@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 动态参数
+        /*  function fun() {
+             // 在函数内部有一个arguments参数
+             // arguments用于接受所有实参
+             // console.log(arguments);
+             for (let i = 0; i < arguments.length; i++) {
+                 console.log(arguments[i]);
+             }
+         }
+         fun(1, 2, 3); */
+        // Math.max();
+        function getMax() {
+            // 假设最大值
+            let max = arguments[0];
+            // 遍历数组
+            for (let i = 0; i < arguments.length; i++) {
+                if (max < arguments[i])
+                    max = arguments[i];
+            }
+            return max;
+        }
+        console.log(getMax(87, 33, 45, 67, 99));
+        // 如果参数固定  写形参  参数不固定写arguments
+    </script>
+</body>
+
+</html>

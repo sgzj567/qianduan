@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var flag = true;
+
+        while (flag) {
+            var choose = prompt('欢迎使用简易计算器功能：' + '\n' + '1.加法运算:' + '\n' + '2.减法运算:' + '\n' + '3.乘法运算:' + '\n' + '4.除法运算:' + '\n' + '5.退出：' + '\n' + '请输入您的选项：')
+            switch (choose) {
+                case '1':
+                    var num1 = parseFloat(prompt('请输入第一个数：'));
+                    var num2 = parseFloat(prompt('请输入第二个数：'));
+                    var result = getSum(num1, num2);
+                    alert('运算结果是：' + result)
+                    break;
+                case '2':
+                    var num1 = parseFloat(prompt('请输入第一个数：'));
+                    var num2 = parseFloat(prompt('请输入第二个数：'));
+                    var result = deduct(num1, num2);
+                    alert('运算结果是：' + result)
+                    break;
+
+                case '3':
+                    var num1 = parseFloat(prompt('请输入第一个数：'));
+                    var num2 = parseFloat(prompt('请输入第二个数：'));
+                    var result = mul(num1, num2);
+                    alert('运算结果是：' + result)
+                    break;
+
+                case '4':
+                    var num1 = parseFloat(prompt('请输入第一个数：'));
+                    var num2 = parseFloat(prompt('请输入第二个数：'));
+                    var result = divide(num1, num2);
+                    alert('运算结果是：' + result)
+                    break;
+                case '5':
+                    flag = false;
+                    break;
+            }
+
+        }
+
+        function getSum(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+
+        function deduct(num1, num2) {
+            var sum = num1 - num2;
+            return sum;
+        }
+
+        function mul(num1, num2) {
+            var sum = num1 * num2;
+            return sum;
+        }
+
+        function divide(num1, num2) {
+            var sum = num1 / num2;
+            return sum;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Hero(uname, type, blood) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(style) {
+                console.log(style);
+
+            }
+        }
+        var lp = new Hero('廉颇', 'liliang', '500');
+        console.log(lp.name);
+        var hy = new Hero('后裔', '射手', '100');
+        console.log(hy.blood, hy.name, hy.type);
+        hy.attack('yuanchen')
+        console.log(hy);
+        // 我们利用构造函数创造对象的过程也称为对象的实例化
+    </script>
+</body>
+
+</html>

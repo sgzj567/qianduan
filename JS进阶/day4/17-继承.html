@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // super就是原来调用父类中的方法的
+        class Father {
+            constructor(uname, age) {
+                this.uname = uname;
+                this.age = age;
+            }
+            money() {
+                console.log('赚钱');
+            }
+        }
+        // 继承
+        // 子类有自己的成员
+        class Son extends Father {
+            //如果子类有自己的constructor 必须通过super才能调用父类方法
+            constructor(uname, age, score) {
+                super(uname, age);
+                this.score = score;
+            }
+            money() {
+                super.money();
+                console.log('赚money');
+            }
+        }
+        let obj = new Son('阿飞', 22, 99);
+        console.log(obj);
+        // 就近原则 先调用自己的方法
+        // 如果依旧想要父类中的方法 依旧使用super
+        obj.money();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 箭头函数的this指向上级作用域  所以指向不明确
+        // document.addEventListener('click', function() {
+        //         window.setInterval(() => {
+        //             console.log(this), 1000;
+        //         })
+        //     })
+        // 事件处理函数 所以此时基本不用箭头函数
+        // 下面这个指向window
+        document.addEventListener('click', () => {
+                console.log(this);
+            })
+            // 构造函数 
+            // let Person = (uname, age) => {
+            //     this.uname = uname;
+            //     this.age = age;
+            // }
+            // new Person();
+            //  总结只要涉及到this 就不要使用箭头函数
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> css优先级</title>
+    <style>
+        div {
+            color: pink!important;
+        }
+        /* 文字执行红色 因为类选择器比元素选择器权重高 */
+        
+        .test {
+            color: red;
+        }
+        /* 文字执行id选择器 因为id选择器比文字选择器权重高 */
+        
+        #demo {
+            color: green;
+        }
+        /* 行内选择器权重高 */
+        /* important权重最高 */
+    </style>
+</head>
+
+<body>
+    <div class="test" id="demo" style="color:purple">你笑起来真好看</div>
+</body>
+
+</html>

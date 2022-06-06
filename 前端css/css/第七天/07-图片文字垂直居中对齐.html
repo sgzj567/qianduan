@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>利用vertical-align实现图片文字垂直居中对齐</title>
+    <style>
+        /* :vertical只针对行内或行内块元素有效 */
+        
+        img {
+            width: 170px;
+            height: 200px;
+            /* 基线对齐 */
+            /* vertical-align: baseline; */
+            /* 底部对齐 */
+            /* vertical-align: bottom; */
+            /* 居中对齐 */
+            /* vertical-align: middle; */
+            /* 顶部对齐 */
+            vertical-align: top;
+        }
+        
+        textarea {
+            outline: none;
+            resize: none;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/ldh.jpg" alt="">pink老师<br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>请您留言
+</body>
+
+</html>

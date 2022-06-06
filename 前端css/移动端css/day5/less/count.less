@@ -1,0 +1,20 @@
+@border:5px + 5;
+@baseFont:50px;
+html{
+    font-size: @baseFont;
+}
+div{
+    // 可以使用加减乘除 但是运算符号两边必须用空格隔开
+    // 两个数参与运算如果只有一个有单位 就以这个单位为准
+    // 如果想要一个运算先运算 可以加括号
+    width: 200px - 50;
+    height: 200px * 2;
+    border: @border solid red;
+    background-color: #666 - #222;
+}
+img{
+    // 两个数参与运算 如果有两个数都有单位 而且不一样的单位 最后的结果以第一个单位为准    
+    // 除法带个括号
+    width: (80rem / @baseFont);
+    height: (80rem / @baseFont);
+}

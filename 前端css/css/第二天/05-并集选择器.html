@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之并集选择器</title>
+    <style>
+        /* 要求1：把熊大和熊二改为粉色 */
+        /* 并集选择器是各选择器通过英文逗号（,）连接而成的
+        语法：元素1，元素2 {样式声明} */
+        
+        div,
+        p {
+            color: pink;
+        }
+        /* 要求二：把熊大熊二改为粉色还有小猪一家改为粉色 */
+        
+        div，p,
+        .pig li {
+            color: pink;
+        }
+        /* 约定的语法规范，并集选择器喜欢竖着写 */
+        /* 最后一组是不用加逗号 */
+        /* 并集选择器可以选择多组标签，同时为他们定义相同样式 */
+    </style>
+</head>
+
+<body>
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul class="pig">
+        <li>小猪佩奇</li>
+        <li>猪爸爸</li>
+        <li>猪妈妈</li>
+    </ul>
+</body>
+
+</html>

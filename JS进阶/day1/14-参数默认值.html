@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(uname, age) {
+            console.log(`我叫${uname}`, `今年${age}岁`);
+        }
+        fn('小熊维尼', '67');
+
+        function fn(uname, age) {
+            console.log(`我叫${uname}`, `今年${age}岁`);
+        }
+        //形参没有接受实参就是undefined
+        fn();
+
+        function fn(uname = '赵云', age = 23) {
+            //没有实参就用参数的默认值
+            console.log(`我叫${uname}`, `今年${age}岁`);
+        }
+        fn();
+
+        function fn(uname = '赵云', age = 23) {
+            console.log(`我叫${uname}`, `今年${age}岁`);
+        }
+        fn('李四', 22); //有实参 即使有默认值 也用实参
+        // 求任意两个参数的和
+        function getSum(num1, num2) {
+            let sum = num1 + num2;
+            console.log(sum);
+        }
+        getSum(45, 77); //122
+        getSum(); //NaN
+        function getSum(num1 = 2, num2 = 9) {
+            let sum = num1 + num2;
+            console.log(sum);
+        }
+        getSum(3); //12
+        // 总结  声明函数时为形参赋值 即为参数默认值 
+        // 如果参数未定义默认值时，参数的默认值为undefined
+        // 调用函数时没有传入对应实参时  参数默认值被当做默认值传入
+    </script>
+</body>
+
+</html>

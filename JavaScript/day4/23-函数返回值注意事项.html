@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getSum(num1, num2) {
+            return num1 + num2;
+            alert('我是不会被执行的');
+        }
+        console.log(getSum(8, 9));
+        //  2.return 只能返回一个值 
+        function fn(num1, num2) {
+            return num1, num2; //返回的是最后一个值
+        }
+        console.log(fn(2, 3));
+        //3.我们求任意两个数加减乘除的结果
+        function getResult(num1, num2) {
+            return [num1 + num2, num1 - num2, num2 * num1, num2 / num1]
+        }
+        var re = getResult(1, 2);
+        console.log(re);
+        for (var i = 0; i < re.length; i++) {
+            console.log(re[i]);
+
+        }
+        // 4.如果我们的函数有return 则返回的是 后面的值
+        function get() {
+            return 999;
+        }
+        console.log(get());
+
+        function get() { //如果没有return 返回的是undefined
+
+        }
+        console.log(get());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(/abc/.test('abc'));
+        // 字符类 []只要出现[]里面的就返回true
+        console.log(/[abc]/.test('abch'));
+        console.log(/[abc]/.test('crrya'));
+        console.log(/[abc]/.test('crrya'));
+        console.log(/[abc]/.test('rry')); //false 
+        // 连字符 [-]
+        console.log(/^[abc]$/.test('abc')); //false
+        console.log(/^[abc]$/.test('aba')); //false
+        console.log(/^[abc]$/.test('a')); //true
+        console.log(/^[abc]$/.test('b')); //true
+        console.log(/^[abc]$/.test('c')); //true
+        // 26个英文字母 选其中一个
+        console.log(/^[a-z]$/.test('d')); //true
+        console.log(/^[a-zA-Z]$/.test('d')); //true 大小写都可以
+        console.log(/^[a-z]$/.test('DD')); //false
+        console.log(/^[a-z]$/.test('bb')); //false
+        console.log(/^[a-zA-Z0-9_]$/.test('6'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象 数组都是引用类型 正则 date也是
+        // 简单类型  n储存地址 数据存储在栈里面
+        let n = 3;
+        let m = n;
+        n = 6;
+        console.log(m); //3
+        console.log(n); //6
+        // 值传递会把数据复制一份传递
+        //  复杂数据类型
+        let obj = {
+                uname: '阿飞',
+                age: 22,
+                sex: '男',
+            }
+            // obj储存指向堆里面数据的地址  堆里面存储obj数据
+            // 引用传递会把数据地址复制一份传递
+        let o = obj;
+        obj.uname = '答辩';
+        console.log(o);
+        console.log(obj);
+    </script>
+</body>
+
+</html>

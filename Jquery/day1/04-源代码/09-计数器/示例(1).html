@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>09-计数器</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <!-- html结构 -->
+    <div id="app">
+      <!-- 计数器功能区域 -->
+      <div class="input-num">
+        <button>
+          -
+        </button>
+        <span>0</span>
+        <button>
+          +
+        </button>
+      </div>
+      <img src="http://www.itheima.com/images/logo.png" alt="" />
+    </div>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <!-- 编码 -->
+    <script>
+      // 计数
+      let num = 0
+      $('.input-num button')
+        .first()
+        .click(function () {
+          if (num > 0) {
+            num--
+            $('.input-num span').text(num)
+          } else {
+            alert('别点啦,到底啦')
+          }
+        })
+      $('.input-num button')
+        .last()
+        .click(function () {
+          if (num < 10) {
+            num++
+            $('.input-num span').text(num)
+          } else {
+            alert('别点啦,到头啦')
+          }
+        })
+    </script>
+  </body>
+</html>

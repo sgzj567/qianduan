@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function makeFunc() {
+        //     var name = "Mozilla";
+
+        //     function displayName() {
+        //         alert(name);
+        //     }
+        //     return displayName;
+        // }
+        // var myFunc = makeFunc();
+        // myFunc();
+        function init() {
+            var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+            function displayName() { // displayName() 是内部函数，一个闭包
+                alert(name); // 使用了父函数中声明的变量
+            }
+            displayName();
+        }
+        init();
+    </script>
+</body>
+
+</html>

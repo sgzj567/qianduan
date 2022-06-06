@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之子选择器</title>
+    <!-- 子选择器只能选择作为某元素最近一级元素，简单理解就是亲儿子元素
+    语法：元素1>元素2 {样式声明} -->
+    <style>
+        .nav>a {
+            color: green;
+        }
+        
+        .geshi {
+            text-decoration: none;
+        }
+    </style>
+    <!-- 例如：div>p {样式声明} 选择div里面所有最近一级p标签元素 -->
+    <!-- 元素1与元素2之间与>隔开 -->
+    <!-- 元素1是父级,元素2是子级,最终选的是元素2 -->
+    <!-- 元素2必须是亲儿子,其孙子,重孙子都不归他管,也可以叫他亲儿子选择器 -->
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#" class="geshi">我是儿子</a>
+        <p>
+            <a href="#" class="geshi">我是孙子</a>
+        </p>
+    </div>
+</body>
+
+</html>

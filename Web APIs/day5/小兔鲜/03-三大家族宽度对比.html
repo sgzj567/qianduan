@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            /* 加入滚动条 */
+            overflow: auto;
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            padding: 10px;
+            border: 10px solid red;
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子 我有好多蚊子
+    </div>
+    <script>
+        let div = document.querySelector('div')
+        console.log(div.scrollWidth); //不带单位  不包含滚动条
+        console.log(div.scrollHeight); //内容的高度+padding+border
+        console.log(div.offsetWidth); //标签的宽度 内容 +padding+border    不带单位
+        console.log(div.offsetHeight); //标签的高度不带单位
+        // 获取位置
+        // offset家族
+        // 获取元素距离自己定位父级元素的左上距离
+        // offset只有只读属性
+        console.log(div.offsetLeft);
+        console.log(div.offsetTop);
+        // 获取元素  往左往上滚出去看不到的距离
+        // scrollLeft获取元素内容往左滚出去看不到的距离
+        // scrollTop获取元素往上滚得看不到距离
+        // 这两个属性可以修改 
+        /*  div.addEventListener('scroll', function() {
+             console.log(this.scrollTop);
+         }) */
+        console.log(div.clientWidth); //内容的可视区域
+        console.log(div.clientHeight);
+        console.log(div.clientLeft); //得到边框的左宽度
+        console.log(div.clientTop); //得到顶部宽度
+    </script>
+</body>
+
+</html>

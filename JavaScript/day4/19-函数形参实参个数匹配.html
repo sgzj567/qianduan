@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getSum(num1, num2) {
+            console.log(num1 + num2);
+
+        }
+        // 1.如果形参和实参个数一致 则正常输出结果
+        getSum(1, 2);
+        // 2.如果形参的个数多余形参个数 只取到形参个数
+        getSum(1, 2, 3);
+        // 3.如果实参的个数小于形参的个数 多的形参定义为undefin 结果NaN
+        getSum(1); // 调用函数时 函数名括号里的是实参  多个参数之间用逗号隔开
+        // 形参的个数和实参个数不匹配 但是结果不可预计 我们尽量要匹配
+    </script>
+</body>
+
+</html>

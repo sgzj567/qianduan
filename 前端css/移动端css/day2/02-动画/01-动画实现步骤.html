@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画实现步骤</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 使用动画 */
+            /* 动画名字和动画时长 */
+            animation: change 1s;
+        }
+        /* 定义动画从200变到600 */
+        /* @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        } */
+        /* 二.定义动画：200 到500*300 到800*500 */
+        
+        @keyframes change {
+            /* 百分比是动画总时长占比 */
+            0% {
+                width: 200px;
+                height: 100px;
+            }
+            15% {
+                width: 500px;
+                height: 300px;
+            }
+            100% {
+                width: 800px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

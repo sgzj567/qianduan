@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 700px;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        let div = document.querySelector('div')
+
+
+        getTime()
+        setInterval(getTime, 1000)
+
+        function getTime() {
+            // 实例化对象一定要写到定时器里面
+            let date = new Date()
+            let day = date.getDay()
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let date1 = date.getDate()
+            let hours = date.getHours()
+            hours = hours < 10 ? '0' + hours : hours
+            let mins = date.getMinutes()
+            mins = mins < 10 ? '0' + mins : mins
+            let sec = date.getSeconds()
+            sec = sec < 10 ? '0' + sec : sec
+            div.innerHTML = `今天是：${year}年${month}月${date1}日${hours}:${mins}:${sec} ${arr[day]}`
+        }
+    </script>
+</body>
+
+</html>

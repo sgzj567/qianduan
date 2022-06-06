@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            display: flex;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        
+        .box div {
+            height: 200px;
+            margin: 0 20px;
+            background-color: pink;
+        }
+        
+        .box div:nth-child(1) {
+            width: 50px;
+        }
+        /* flex属性是占用剩余父级盒子剩余尺寸的份书2 */
+        /* 此时是减去1与3盒子的宽度(但是3盒子没有设定宽度 是里面内容宽度) 占用剩下的盒子宽度 */
+        
+        .box div:nth-child(2) {
+            flex: 1;
+        }
+        /* 此时是把1盒子宽度减去与2号盒子平均分配剩下的宽度 3号盒子占用剩下的1份*/
+        /* 视觉效果是2与3盒子宽度相等 */
+        
+        .box div:nth-child(3) {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>
